@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>BellaDonna</title>
+
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/juery/1.18,"></script>
+  
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'shared/top_navbar' %>
 
 <%= yield %>
-
 </body>
 </html>

@@ -15,4 +15,7 @@ end
 def policies
 end
 
+def contact
+end
+
 end

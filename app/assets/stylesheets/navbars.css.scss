@@ -1,0 +1,33 @@
+.navbar {
+  margin-top: 60px !important;
+  margin-bottom: 0 !important;
+  height: 20px !important;
+  background-color: gray;
+  border: none;
+}
+
+.navbar .container-fluid {
+  border-radius: none !important;
+}
+
+.navbar-inverse .navbar-brand {
+color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+color: #fff;
+}
+
+.home {
+  
+  overflow: hidden;
+}
+
+.home img {
+  width: 100%;
+  
+}
+
+.inner-container {
+  margin-top: 100px;
+}
