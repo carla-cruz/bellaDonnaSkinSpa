@@ -1,13 +1,20 @@
 .navbar {
   margin-top: 60px !important;
   margin-bottom: 0 !important;
-  height: 20px !important;
+  height: 10px !important;
   background-color: gray;
   border: none;
+  border-radius: 0;
 }
 
 .navbar .container-fluid {
-  border-radius: none !important;
+  /*border-radius: 0 !important;*/
+  /*background-color: gray;*/
+}
+
+.navbar-inner {
+  
+
 }
 
 .navbar-inverse .navbar-brand {
@@ -16,7 +23,12 @@ color: #fff;
 
 .navbar-inverse .navbar-nav > li > a {
 color: #fff;
+  &:hover {
+    color: rgb(251,173,181);
+  }
 }
+
+
 
 .home {
   
@@ -25,7 +37,7 @@ color: #fff;
 
 .home img {
   width: 100%;
-  
+  margin-top: -240px;
 }
 
 .inner-container {
