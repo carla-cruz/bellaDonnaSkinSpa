@@ -6,8 +6,6 @@ BellaDonna::Application.routes.draw do
   get '/products' => 'static_pages#products', :as => :products
   get '/services' => 'static_pages#services', :as => :services
   get '/policies' => 'static_pages#policies', :as => :policies
-  get '/contact' => 'static_pages#contact', :as => :contact
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

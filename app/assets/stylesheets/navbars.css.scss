@@ -1,10 +1,18 @@
 .navbar {
-  margin-top: 60px !important;
   margin-bottom: 0 !important;
   height: 10px !important;
-  background-color: gray;
   border: none;
   border-radius: 0;
+background: #db572b;
+background: -moz-linear-gradient(top,  #db572b 0%, #bf431a 94%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db572b), color-stop(94%,#bf431a));
+background: -webkit-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+background: -o-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+background: -ms-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+background: linear-gradient(to bottom,  #db572b 0%,#bf431a 94%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db572b', endColorstr='#bf431a',GradientType=0 );
+
+
 }
 
 .navbar .container-fluid {
@@ -37,7 +45,7 @@ color: #fff;
 
 .home img {
   width: 100%;
-  margin-top: -240px;
+  margin-top: -150px;
 }
 
 .inner-container {
