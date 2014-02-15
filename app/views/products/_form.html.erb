@@ -1,0 +1,13 @@
+<%= nested_form_for @product do |f| %>
+ <%= f.label :name %><br>
+ <%= f.text_field :name %><br>
+ <%= f.label :price %><br>
+ <%= f.text_field :price %><br>
+ <%= f.label :description %><br>
+ <%= f.text_field :description %><br>
+    <%= f.fields_for :categories do |c| %>
+      <%= c.label :category %><br>
+      <%= c.text_field :name %>
+    <% end %>
+ <%= f.submit "Add Product" %>
+ <% end %>

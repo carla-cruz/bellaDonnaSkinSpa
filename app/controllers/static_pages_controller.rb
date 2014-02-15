@@ -12,9 +12,6 @@ end
 def services
 end
 
-def policies
-end
-
 def contact
 end
 

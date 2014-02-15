@@ -7,11 +7,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-
-group :assets do
-  gem 'font-awesome-rails'
-  gem 'twitter-bootstrap-rails'
-end
+gem 'devise'
+gem 'font-awesome-rails'
+gem 'twitter-bootstrap-rails'
+gem 'nested_form'
 
 group :development do
   gem 'sqlite3'

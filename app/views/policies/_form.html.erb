@@ -1,0 +1,7 @@
+<%= form_for @policy do |f| %>
+ <%= f.label :name %><br>
+ <%= f.text_field :name %>
+ <%= f.label :description %><br>
+ <%= f.text_field :description %>
+ <%= f.submit "Add Policy" %>
+ <% end %>
