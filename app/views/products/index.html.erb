@@ -3,8 +3,10 @@
     <h1><%= p.name %></h1>
     <p><%= p.description %></p>
     <p>$<%= p.price %>0.00</p>
-    <% p.categories.each do |cat| %>
-      <p><% cat.name %></p>
+    <p><%= p.sort_order %></p>
+    <%= image_tag(p.image_url) %>
+        <% p.categories.each do |cat| %>
+      <p><%= cat.name %></p>
     <% end %>
   <hr>
   <% end %>
