@@ -3,43 +3,32 @@
   height: 10px !important;
   border: none;
   border-radius: 0;
-background: #db572b;
-background: -moz-linear-gradient(top,  #db572b 0%, #bf431a 94%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db572b), color-stop(94%,#bf431a));
-background: -webkit-linear-gradient(top,  #db572b 0%,#bf431a 94%);
-background: -o-linear-gradient(top,  #db572b 0%,#bf431a 94%);
-background: -ms-linear-gradient(top,  #db572b 0%,#bf431a 94%);
-background: linear-gradient(to bottom,  #db572b 0%,#bf431a 94%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db572b', endColorstr='#bf431a',GradientType=0 );
-
-
+  background: #db572b;
+  background: -moz-linear-gradient(top,  #db572b 0%, #bf431a 94%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db572b), color-stop(94%,#bf431a));
+  background: -webkit-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+  background: -o-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+  background: -ms-linear-gradient(top,  #db572b 0%,#bf431a 94%);
+  background: linear-gradient(to bottom,  #db572b 0%,#bf431a 94%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db572b', endColorstr='#bf431a',GradientType=0 );
 }
 
 .navbar .container-fluid {
-  /*border-radius: 0 !important;*/
-  /*background-color: gray;*/
-}
-
-.navbar-inner {
-  
-
+  background-color: #db572b;
 }
 
 .navbar-inverse .navbar-brand {
-color: #fff;
+  color: #fff;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-color: #fff;
+  color: #fff;
   &:hover {
     color: rgb(251,173,181);
   }
 }
 
-
-
 .home {
-  
   overflow: hidden;
 }
 
