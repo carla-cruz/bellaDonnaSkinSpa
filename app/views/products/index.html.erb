@@ -1,4 +1,12 @@
 <div class="inner-container products">
-  
+  <% @products.each do |p| %>
+    <h1><%= p.name %></h1>
+    <p><%= p.description %></p>
+    <p>$<%= p.price %>0.00</p>
+    <% p.categories.each do |cat| %>
+      <p><% cat.name %></p>
+    <% end %>
+  <hr>
+  <% end %>
  
 </div>
