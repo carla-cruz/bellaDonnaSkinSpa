@@ -1,44 +1,75 @@
 /*.blurb {
 width: 360px;
 height: 200px;
-  position: relative;
-  z-index: 4;
-  color: #fff;
-  font-size: 40px;
-  margin-left: 25%;
-  margin-top: 7%;
+position: relative;
+z-index: 4;
+color: #fff;
+font-size: 40px;
+margin-left: 25%;
+margin-top: 7%;
 }*/
 
+$primary-orange: #db572b;  
+
 .home{
-	background: url('/assets/womans_face.jpg') no-repeat top center;
-	background-color: #eae9e9;
+background: url('/assets/womans_face.jpg') repeat-x top center;
 
 	#promotions {
 	background-color: rgba(0,0,0,.6);
 	float:none;
 	margin: 50px auto 75px auto;
-	
-		figure{
-		margin:15px auto;
-		
-		img{
+	max-height:450px;
+	max-width:655px;
+
+		figure
+		{
+		display:block;
 		margin:0 auto;
-		}
+		position:relative;
+
+		
+			img{
+				position:absolute;
+				top:-17px;
+				}
+
+			h2{
+			color:#fee686;
+			font-size:58px;
+			}
+
+			h3{
+			color:#fff;
+			font-size:50px;
+			}
+
+			h2, h3{
+			line-height:1;
+			text-transform:uppercase;
+			text-align:center;
+			}
+
+			figcaption{
+			float:none;
+			margin:25px auto;
+			}
+
 		}
 	}
-
-	}
-
-	#mainCategories{
-float:none;
-
-img{
-display:inline-block;
 }
 
-h2{
-display:inline-block;
-	text-transform:uppercase;
-}
+#mainCategories{
+	float:none;
 
+	figure{
+		img{
+		display:inline-block;
+		}
+
+		h2{
+		display:inline-block;
+		text-transform:uppercase;
+		}
 	}
+
+}
