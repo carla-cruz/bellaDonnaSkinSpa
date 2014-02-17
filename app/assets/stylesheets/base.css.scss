@@ -1,16 +1,24 @@
 body {
   font-family: ariel, sans-serif;
   padding-bottom: 100px;
+
   li {
     list-style: none;
   }
   .site-container {
     width: 1170px;
+    padding-top: 20px;
+  }
+  #new_policy_link {
+    padding-top: 20px;
   }
 
   ul {
     margin: 0;
     padding: 0;
+  }
+  form input {
+    margin-bottom: 10px;
   }
 } 
 

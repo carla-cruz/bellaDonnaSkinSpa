@@ -1,5 +1,5 @@
 <h2>Add New Policy</h2>
-
+<a class="close" href="">X</a>
 <%= form_for @policy, :html => {:id => "new_policy", :class => "form form-inline"}, remote: true do |f| %>
 <div class="form-group">
  <%= f.text_field :name, class: "form-control", placeholder: "Policy Name" %>
@@ -7,6 +7,6 @@
  <div class="form-group">
  <%= f.text_field :description, class: "form-control", placeholder: "Policy Desciption" %>
 </div>
- <%= f.submit "Add Policy", class: "btn btn-success" %>
- <a class="close" href="">X</a>
+ <%= f.submit "Add Policy", class: "btn btn-primary" %>
+ 
  <% end %>

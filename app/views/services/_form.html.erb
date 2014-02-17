@@ -1,5 +1,5 @@
 <h2>Add New Service</h2>
-
+<a class="close" href="">X</a>
 <%= form_for @service, :html => {:id => "new_service", :class => "form form-inline"}, remote: true do |f| %>
 <div class="form-group">
  <%= f.text_field :title, class: "form-control",placeholder: "Title" %>
@@ -13,6 +13,6 @@
 <div class="form-group">
  <%= f.text_field :description, class: "form-control",placeholder: "Description" %>
 </div>
- <%= f.submit "Add Service", class: "btn btn-success" %>
- <a class="close" href="">X</a>
+ <%= f.submit "Add Service", class: "btn btn-primary" %>
+ 
  <% end %>
