@@ -8,3 +8,37 @@ height: 200px;
   margin-left: 25%;
   margin-top: 7%;
 }*/
+
+.home{
+	background: url('/assets/womans_face.jpg') no-repeat top center;
+	background-color: #eae9e9;
+
+	#promotions {
+	background-color: rgba(0,0,0,.6);
+	float:none;
+	margin: 50px auto 75px auto;
+	
+		figure{
+		margin:15px auto;
+		
+		img{
+		margin:0 auto;
+		}
+		}
+	}
+
+	}
+
+	#mainCategories{
+float:none;
+
+img{
+display:inline-block;
+}
+
+h2{
+display:inline-block;
+	text-transform:uppercase;
+}
+
+	}
