@@ -1,4 +1,4 @@
-<%= nested_form_for @product do |f| %>
+<%= nested_form_for @product, :html => {:id => "new_product"}, remote: true do |f| %>
  <%= f.label :name %><br>
  <%= f.text_field :name %><br>
  <%= f.label :price %><br>

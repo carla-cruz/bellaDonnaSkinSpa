@@ -12,7 +12,7 @@ gem 'font-awesome-rails'
 gem 'twitter-bootstrap-rails'
 gem 'nested_form'
 gem 'pony'
-gem 'protected_attributes'
+# gem 'protected_attributes'
 
 group :development do
   gem 'sqlite3'

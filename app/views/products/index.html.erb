@@ -1,6 +1,11 @@
 <div class="inner-container products">
+
+  <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
+  <br><br>
+
+<ul id="product_list">
   <% @products.each do |p| %>
-    <h1><%= p.name %></h1>
+    <li><h2><%= p.name %></h2>
     <p><%= p.description %></p>
     <p>$<%= p.price %>0.00</p>
     <p><%= p.sort_order %></p>
@@ -8,7 +13,9 @@
         <% p.categories.each do |cat| %>
       <p><%= cat.name %></p>
     <% end %>
+    <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p></li>
   <hr>
+
   <% end %>
- 
+</ul>
 </div>
