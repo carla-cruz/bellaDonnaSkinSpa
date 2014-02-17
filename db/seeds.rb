@@ -3,11 +3,11 @@ Policy.create(name: "Punctuality", description: "Please arrive 10 minutes prior 
 Policy.create(name: "During Your Visit", description: "To get the most out of your treatment, communicate with your therapist.  You comfort and enjoyment are most important to us, so let us know if you have concerns about the temperature of your treatment room, music volume or other issues.")
 Policy.create(name: "Quiet Please", description: "To maintain a peaceful atmosphere, we ask that you turn your cell phone to vibrate and keep conversations to a whisper.  Please do not leave children unattended.  The spa is free from pets and smoking for the comfort and consideration of all guests. Thank you!")
 
-# 1.upto(10) do |i|
-#   Product.create(name: "Product #{i}", price: i, description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", image_url: "http://www.seagullhair.com/Images/photos/moroccan-oil-store-products.jpg")
-# end
+1.upto(10) do |i|
+  Product.create(name: "Product #{i}", price: i, description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", image_url: "http://www.seagullhair.com/Images/photos/moroccan-oil-store-products.jpg")
+end
 
-# 1.upto(10) do |i|
-#   @service = Service.new(kind: "Kind #{i}", title: "Service number #{i}", duration: "#{i} minutes", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.", price: i)
-#   @service.save
-# end
+1.upto(10) do |i|
+  @service = Service.new(kind: "Kind #{i}", title: "Service number #{i}", duration: "#{i} minutes", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.", price: i)
+  @service.save
+end
