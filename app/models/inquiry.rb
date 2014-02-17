@@ -27,7 +27,7 @@ class Inquiry
       :from => %("#{name}" <#{email}>),
       :reply_to => email,
       :subject => "Website inquiry",
-      :body => message
+      :body => message,
       # :html_body => simple_format(message)
     })
   end

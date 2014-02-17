@@ -1,8 +1,9 @@
-<div class="inner-container services">
+<div class="site-container services container">
 <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
   <br><br>
+  <div class="row">
 
-<ul id="service_list">
+<ul class="col-8-md" id="service_list">
 
 <% @services.each do |s| %>
     <li><h1><%= s.title %></h1>
@@ -16,6 +17,9 @@
   
   <% end %>
 </ul>
+
+
+</div>
 </div>
 
  
