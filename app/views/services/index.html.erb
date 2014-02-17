@@ -1,25 +1,21 @@
 <div class="site-container services container">
-<%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
+  <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
   <br><br>
-  <div class="row">
-
-<ul class="col-8-md" id="service_list">
-
-<% @services.each do |s| %>
-    <li><h1><%= s.title %></h1>
-    <p><%= s.description %></p>
-    <p><%= s.duration %></p>
-    <p>$<%= s.price %>0</p>
-    <p><%= s.kind %></p>
-    <p><%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %></p>
-    <hr>
-  </li>
   
-  <% end %>
-</ul>
 
+    <ul class="col-8-md" id="service_list">
 
+      <% @services.each do |s| %>
+      <li><h1><%= s.title %></h1>
+        <p><%= s.description %></p>
+        <p><%= s.duration %></p>
+        <p>$<%= s.price %>0</p>
+        <p><%= s.kind %></p>
+        <p><%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %></p>
+        <hr>
+      </li>
+
+      <% end %>
+    </ul>
 </div>
-</div>
 
- 
