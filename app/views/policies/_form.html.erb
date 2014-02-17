@@ -1,7 +1,12 @@
-<%= form_for @policy, :html => {:id => "new_policy"}, remote: true do |f| %>
- <%= f.label :name %><br>
- <%= f.text_field :name %><br>
- <%= f.label :description %><br>
- <%= f.text_field :description %><br>
- <%= f.submit "Add Policy" %>
+<h2>Add New Policy</h2>
+
+<%= form_for @policy, :html => {:id => "new_policy", :class => "form form-inline"}, remote: true do |f| %>
+<div class="form-group">
+ <%= f.text_field :name, class: "form-control", placeholder: "Policy Name" %>
+ </div>
+ <div class="form-group">
+ <%= f.text_field :description, class: "form-control", placeholder: "Policy Desciption" %>
+</div>
+ <%= f.submit "Add Policy", class: "btn btn-success" %>
+ <a class="close" href="">X</a>
  <% end %>

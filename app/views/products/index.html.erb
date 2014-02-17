@@ -1,9 +1,12 @@
 <div class="site-container products container">
-
+<div class="row">
+  <div class="col-sm-12">
   <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
   <br><br>
-
-  <ul id="product_list">
+</div>
+</div>
+<div class="row">
+  <ul class="col-sm-12" id="product_list">
     <% @products.each do |p| %>
     <li><h2><%= p.name %></h2>
       <p><%= p.description %></p>
@@ -16,8 +19,9 @@
       <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
       <hr>
     </li>
-    
+
 
     <% end %>
   </ul>
+</div>
 </div>

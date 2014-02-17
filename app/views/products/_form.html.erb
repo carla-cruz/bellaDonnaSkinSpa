@@ -1,15 +1,22 @@
-<%= nested_form_for @product, :html => {:id => "new_product"}, remote: true do |f| %>
- <%= f.label :name %><br>
- <%= f.text_field :name %><br>
- <%= f.label :price %><br>
- <%= f.text_field :price %><br>
-  <%= f.label :image_url %><br>
- <%= f.text_field :image_url %><br>
- <%= f.label :description %><br>
- <%= f.text_field :description %><br>
+<h2>Add New Product</h2>
+
+<%= nested_form_for @product, :html => {:id => "new_product", :class => "form form-inline"}, remote: true do |f| %>
+<div class="form-group">
+ <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+ </div>
+ <div class="form-group">
+ <%= f.text_field :price, class: "form-control", placeholder: "Price" %></div>
+ <div class="form-group">
+ <%= f.text_field :image_url, class: "form-control", placeholder: "Image URL" %></div>
+ <div class="form-group">
+ <%= f.text_field :description, class: "form-control", placeholder: "Description" %></div>
+ <div class="form-group">
     <%= f.fields_for :categories do |c| %>
-      <%= c.label :category %><br>
-      <%= c.text_field :name %>
+      
+      <%= c.text_field :name, class: "form-control", placeholder: "Category" %>
+    
     <% end %>
- <%= f.submit "Add Product" %>
+    </div>
+ <%= f.submit "Add Product", class: "btn btn-success"  %>
+ <a class="close" href="">X</a>
  <% end %>
