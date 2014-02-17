@@ -1,4 +1,5 @@
 class ServicesController < ApplicationController
+  respond_to :html, :js
 
   def index
     @services = Service.all
@@ -9,11 +10,10 @@ class ServicesController < ApplicationController
   end
 
   def create
-    @service = Service.create(service_params)
-    if @service.save
-      redirect_to services_path
-    else
-      redirect_to(:back)
+    @service = Service.create!(service_params)
+    respond_to do |format|
+      format.html { redirect_to services_path }
+      format.js
     end
   end
 
@@ -23,7 +23,12 @@ class ServicesController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    @service = Service.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to services_path }
+      format.js
+    end
   end
 
   private

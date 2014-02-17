@@ -7,7 +7,7 @@
   <% @products.each do |p| %>
     <li><h2><%= p.name %></h2>
     <p><%= p.description %></p>
-    <p>$<%= p.price %>0.00</p>
+    <p>$<%= p.price %></p>
     <p><%= p.sort_order %></p>
     <%= image_tag(p.image_url) %>
         <% p.categories.each do |cat| %>
