@@ -13,6 +13,21 @@
 <body>
   <%= render 'shared/top_navbar' %>
 
-  <%= yield %>
+    <% if flash[:notice] %>
+    <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if flash[:alert] %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
+    <% if flash[:error] %>
+    <ul>
+      <div class="alert"><% flash[:error].each do |error| %>
+        <li><%= error %></li>
+        <% end %>
+      </div>
+    </ul>
+    <% end %>
+    <%= yield %>
+
 </body>
 </html>

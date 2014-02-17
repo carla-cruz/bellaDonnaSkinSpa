@@ -1,4 +1,4 @@
-<br><%= form_for @policy do |f| %>
+<%= form_for @policy, :html => {:id => "new_policy"}, remote: true do |f| %>
  <%= f.label :name %><br>
  <%= f.text_field :name %><br>
  <%= f.label :description %><br>

@@ -1,0 +1,10 @@
+<li><h2><%= @product.name %></h2>
+  <p><%= @product.description %></p>
+  <p>$<%= @product.price %>0.00</p>
+  <%= image_tag(@product.image_url) %>
+  <% @product.categories.each do |cat| %>
+  <p><%= cat.name %></p>
+  <% end %>
+  <p><%= link_to "Delete", @product, method: :delete, class: "delete_link", remote: true %></p></li>
+  <hr>
+

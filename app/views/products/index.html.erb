@@ -1,14 +1,23 @@
-<div class="inner-container products">
-  <% @products.each do |p| %>
-    <h1><%= p.name %></h1>
-    <p><%= p.description %></p>
-    <p>$<%= p.price %>0.00</p>
-    <p><%= p.sort_order %></p>
-    <%= image_tag(p.image_url) %>
-        <% p.categories.each do |cat| %>
+<div class="site-container products container">
+
+  <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
+  <br><br>
+
+  <ul id="product_list">
+    <% @products.each do |p| %>
+    <li><h2><%= p.name %></h2>
+      <p><%= p.description %></p>
+      <p>$<%= p.price %></p>
+      <p><%= p.sort_order %></p>
+      <%= image_tag(p.image_url, class: "img-responsive") %>
+      <% p.categories.each do |cat| %>
       <p><%= cat.name %></p>
+      <% end %>
+      <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
+      <hr>
+    </li>
+    
+
     <% end %>
-  <hr>
-  <% end %>
- 
+  </ul>
 </div>

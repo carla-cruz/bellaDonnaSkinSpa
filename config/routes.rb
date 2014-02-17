@@ -11,6 +11,10 @@ BellaDonna::Application.routes.draw do
 
   resources :policies
   resources :services
+
+  resources :inquiries, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
 end
-  
+
 
