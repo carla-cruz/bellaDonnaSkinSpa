@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 20140216182324) do
     t.string   "name"
     t.text     "description"
     t.decimal  "price",                   precision: 10, scale: 2
-    t.string   "brand"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sort_order"
