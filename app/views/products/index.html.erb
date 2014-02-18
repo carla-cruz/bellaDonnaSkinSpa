@@ -1,25 +1,26 @@
 <div class="site-container products container">
-<div class="row">
-  <div class="col-sm-12">
-  <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
-  <br><br>
-</div>
-</div>
-<div id="productsList" class="row">
-  <ul class="col-sm-12" id="product_list">
-    <% @products.each do |p| %>
-    <li><h2><%= p.name %></h2>
-      <p><%= p.description %></p>
-      <p>$<%= p.price %></p>
-      <p><%= p.sort_order %></p>
-      <%= image_tag(p.image_url, class: "img-responsive") %>
-      <% p.categories.each do |cat| %>
-      <p><%= cat.name %></p>
-      <% end %>
-      <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
-      <hr>
-    </li>
-    <% end %>
-  </ul>
-</div>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
+      <br><br>
+    </div>
+  </div>
+  <div class="row">
+    <h1>Our Products</h1>
+    <ul class="col-sm-12" id="product_list">
+      <% @products.each do |p| %>
+      <li class="col-sm-6">
+       <%= image_tag(p.image_url, class: "img-responsive") %>
+       <h2><%= p.name %></h2>
+       <p><strong><%= p.description %></strong></p>
+       <p>$<%= p.price %></p>
+       <p><%= p.sort_order %></p>
+       <% p.categories.each do |cat| %>
+       <p><%= cat.name %></p>
+       <% end %>
+       <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
+     </li>
+     <% end %>
+   </ul>
+ </div>
 </div>

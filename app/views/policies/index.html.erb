@@ -1,12 +1,13 @@
 <div class="site-container policies container">
-<%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true %>
-<br><br>
+	<%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true %>
+	<br><br>
 
-<ul id="policy_list">
-  <% @policies.each do |p| %>
-  <li><h2><%= p.name %></h2><p><%= p.description %></p>
-  <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></li>
-
-<% end %>
-</ul>
+	<ul id="policy_list">
+		<% @policies.each do |p| %>
+		<li><h2><%= p.name %></h2><p><%= p.description %></p>
+			<%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+			<hr>
+		</li>
+		<% end %>
+	</ul>
 </div>
