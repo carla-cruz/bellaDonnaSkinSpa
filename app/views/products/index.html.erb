@@ -5,7 +5,7 @@
   <br><br>
 </div>
 </div>
-<div class="row">
+<div id="productsList" class="row">
   <ul class="col-sm-12" id="product_list">
     <% @products.each do |p| %>
     <li><h2><%= p.name %></h2>
@@ -19,8 +19,6 @@
       <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
       <hr>
     </li>
-
-
     <% end %>
   </ul>
 </div>

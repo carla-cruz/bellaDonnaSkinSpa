@@ -1,13 +1,35 @@
 $primary-highlight: #ccab46;  
 
+
+@media screen and (max-width: 825px){
+	.home{
+	min-height:375px !important;
+
+		#promotions {
+		margin: 0 auto !important;
+		}
+	}
+
+	#mainCategories{
+		img{
+		max-width:75px !important;
+		}
+
+		h2{
+		font-size:28px !important;
+		}
+	}
+}
+
 .home{
 overflow:hidden;
+min-height:600px;
 position:relative;
 width:auto;
 
 	img{
-	position:absolute;
-	top:0;
+	position:relative;
+	margin:-595px auto;
 	}
 
 	#promotions {
