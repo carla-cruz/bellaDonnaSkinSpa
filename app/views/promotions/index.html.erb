@@ -1,0 +1,13 @@
+<div class="site-container promotions container">
+	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true %>
+	<br><br>
+
+	<ul id="promotion_list">
+		<% @promotions.each do |p| %>
+		<li><h2><%= p.header %></h2><p><%= p.subheader %></p>
+			<%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+			<hr>
+		</li>
+		<% end %>
+	</ul>
+</div>
