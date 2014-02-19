@@ -20,3 +20,23 @@ h1, h2, h3{line-height:1.0;}
 #product_list{
 	img{margin-top:15px;}
 }
+
+/* Contact Page */
+
+#contactBackground{
+background:url('/assets/lotus.jpg')repeat-x center center;	
+height:675px;
+margin:0 auto;
+width:100%;
+
+	.contact {
+	max-width:800px;
+	padding-top:50px;
+	}
+
+	h1, p{
+	background-color: rgba(0,0,0,.75);
+	color:#feefc5;
+	padding:10px;
+	}
+}
