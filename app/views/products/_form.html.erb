@@ -1,6 +1,7 @@
+
+<%= nested_form_for @product, :html => {:id => "new_product", :class => "form form-inline"}, remote: true do |f| %>
 <h2>Add New Product</h2>
 <a class="close" href="">X</a>
-<%= nested_form_for @product, :html => {:id => "new_product", :class => "form form-inline"}, remote: true do |f| %>
 <div class="form-group">
  <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
  </div>

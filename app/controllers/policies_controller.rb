@@ -1,5 +1,4 @@
 class PoliciesController < ApplicationController
-  respond_to :html, :js
 
   def index
     @policies = Policy.all

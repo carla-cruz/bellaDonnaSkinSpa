@@ -1,12 +1,16 @@
-<a class="close" href="">X</a>
-<h2>add a promotion</h2>
 <%= form_for @promotion, :html => {:id => "new_promotion", :class => "form form-inline"}, remote: true do |f| %>
+<a class="close" href="">X</a>
+<h2>Add a Promotion</h2>
 <div class="form-group">
  <%= f.text_field :header, class: "form-control", placeholder: "Promotion Header" %>
- <%= f.text_field :subheader, class: "form-control", placeholder: "Promotion Subheader" %>
- </div>
-  <%=f.label "make this active" %>
-  <%=f.check_box :is_active %>
+ <%= f.text_field :subheader, class: "form-control", placeholder: "Promotion Subheader" %><br>
+ </div><br>
+ 
+  <%= f.label "make this active" %>
+  <%= f.check_box :is_active %>
+ </div><br>
+ <div class="form-group">
  <%= f.submit "Add Promotion", class: "btn btn-primary" %>
+ </div>
  
  <% end %>
