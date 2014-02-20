@@ -30,7 +30,13 @@ class PromotionsController < ApplicationController
 	end
 
 	def destroy
-		@promotion = Promotion.destroy(params[:id])
+		@promotion = Promotion.find(params[:id])
+		if @promotion.is_active
+			@promotion = Promotion.destroy(params[:id])
+			Promotion.last.update_attributes(is_active: true)
+		else
+			@promotion = Promotion.destroy(params[:id])
+		end
 		respond_to do |format|
 			format.html{redirect_to promotions_path}
 			format.js
