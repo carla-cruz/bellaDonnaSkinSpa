@@ -2,7 +2,7 @@
 	<%if user_signed_in? && is_admin? %>
 	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true %>
 	<br><br>
-	
+
 	<ul id="promotion_list">
 
 		<% @promotions.each do |p| %>
@@ -13,6 +13,7 @@
 				<p>Date: <%= p.created_at.strftime("%d %b. %Y") %></p>
 				<p>Promotion is: <%= p.is_active == true ? "ACTIVE" : "INACTIVE" %></p>
 				<%= link_to "Make Active", activate_promotion_path(p.id), class: "btn btn-success" %>
+				
 				<%= link_to "Delete", p, method: :delete, class: "delete_link btn btn-danger", remote: true %>
 				<hr>
 			</li>
