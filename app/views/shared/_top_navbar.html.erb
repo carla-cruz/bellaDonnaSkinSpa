@@ -11,12 +11,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/about">About</a></li>
-            <li><a href="/products">Products</a></li>
-            <li><a href="/policies">Policies</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/promotions">Promotions</a></li>
-            <li><a href="/inquiries/new">Contact Us</a></li>
+            <li class="main"><%= link_to "About", about_path, class: cp(about_path) %></li>
+            <li class="main"><%= link_to "Products", products_path, class: cp(products_path) %></li>
+            <li class="main"><%= link_to "Policies", policies_path, class: cp(policies_path) %></li>
+            <li class="main"><%= link_to "Services", services_path, class: cp(services_path) %></li>
+            <li class="main"><%= link_to "Promotions", promotions_path, class: cp(promotions_path) %></li>
+            <li class="main"><%= link_to "Contact", new_inquiry_path, class: cp(new_inquiry_path) %></li>
             <% if user_signed_in? && is_admin? %>
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
             <% end %>

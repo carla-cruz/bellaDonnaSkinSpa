@@ -12,7 +12,11 @@
   background: linear-gradient(to bottom,  #db572b 0%,#bf431a 94%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db572b', endColorstr='#bf431a',GradientType=0 );
 }
-
+li.main {
+  .active {
+    color: #FBADB5 !important;
+  }
+}
 .navbar .container-fluid {
   background-color: #db572b;
 }
@@ -26,4 +30,5 @@
   &:hover {
     color: rgb(251,173,181);
   }
+
 }
