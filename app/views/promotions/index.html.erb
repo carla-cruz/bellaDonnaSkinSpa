@@ -1,4 +1,5 @@
 <div class="site-container promotions container">
+	<%if user_signed_in? && is_admin? %>
 	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true %>
 	<br><br>
 
@@ -18,4 +19,10 @@
 	</div>
 		<% end %>
 	</ul>
+
+	<% else %>
+
+	this is a test
+
+	<% end %>
 </div>

@@ -17,6 +17,9 @@
             <li><a href="/services">Services</a></li>
             <li><a href="/promotions">Promotions</a></li>
             <li><a href="/inquiries/new">Contact Us</a></li>
+            <% if user_signed_in? && is_admin? %>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+            <% end %>
           </ul>
         </div>
       </div>
