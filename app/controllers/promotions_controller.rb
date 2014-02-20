@@ -18,6 +18,13 @@ class PromotionsController < ApplicationController
 		end
 	end
 
+	def activate_promotion
+		clear_promotion_list
+		promo = Promotion.find(params[:id])
+		promo.update_attributes(is_active: true)
+		redirect_to promotions_path
+	end
+
 	def edit
 	end
 
