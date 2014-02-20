@@ -1,7 +1,5 @@
 class PromotionsController < ApplicationController
 
-	before_filter :clear_promotion_list, only: [:create, :update]
-
 	def index
 		@promotions = Promotion.all.reverse
 	end
