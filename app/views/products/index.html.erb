@@ -20,7 +20,10 @@
        <% p.categories.each do |cat| %>
        <p><%= cat.name %></p>
        <% end %>
+       <%if user_signed_in? && is_admin? %>
        <p><%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %></p>
+      <% end %>
+     
      </li>
      <% end %>
    </ul>
