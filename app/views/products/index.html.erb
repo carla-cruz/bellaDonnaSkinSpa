@@ -1,8 +1,10 @@
 <div class="site-container products container">
   <div class="row">
     <div class="col-sm-12">
+      <%if user_signed_in? && is_admin? %>
       <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
       <br><br>
+      <% end %>
     </div>
   </div>
   <div class="row">

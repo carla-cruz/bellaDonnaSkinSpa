@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  
+  before_filter :is_admin?, except: [:index]
 
   def index
     @products = Product.all

@@ -1,5 +1,7 @@
 class PoliciesController < ApplicationController
 
+  before_filter :is_admin?, except: [:index]
+
   def index
     @policies = Policy.all
   end

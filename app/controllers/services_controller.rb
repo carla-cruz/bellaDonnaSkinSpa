@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
-  respond_to :html, :js
+  
+  before_filter :is_admin?, except: [:index]
 
   def index
     @services = Service.all

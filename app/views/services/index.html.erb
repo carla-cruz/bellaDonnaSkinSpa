@@ -1,6 +1,8 @@
 <div class="site-container services container">
+  <%if user_signed_in? && is_admin? %>
   <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
   <br><br>
+  <% end %>
   
 
     <ul class="col-8-md" id="service_list">

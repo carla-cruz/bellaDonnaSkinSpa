@@ -1,5 +1,7 @@
 class PromotionsController < ApplicationController
 
+  before_filter :is_admin?, except: [:index]
+
 	def index
 		@promotions = Promotion.all.reverse
 	end

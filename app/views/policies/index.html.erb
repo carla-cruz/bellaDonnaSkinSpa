@@ -1,6 +1,8 @@
+<%if user_signed_in? && is_admin? %>
 <div class="site-container policies container">
 	<%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true %>
 	<br><br>
+<% end %>
 
 	<ul id="policy_list">
 		<% @policies.each do |p| %>
