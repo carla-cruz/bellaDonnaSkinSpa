@@ -19,6 +19,10 @@
 
       <div class="tab-pane active" id="skin">
 
+        <div class="jumbotron">
+          <h1>Skin</h1>
+        </div>
+
         <% @skin_services.each do |s| %>
         <li class="service-box col-md-6"><h1><%= s.title %></h1>
           <p><%= s.description %></p>
@@ -35,6 +39,11 @@
       </div>
 
       <div class="tab-pane" id="sugaring">
+
+        <div class="jumbotron">
+          <h1>Sugaring</h1>
+        </div>
+
         <% @sugaring_services.each do |s| %>
         <li class="service-box col-md-6"><h1><%= s.title %></h1>
           <p><%= s.description %></p>
