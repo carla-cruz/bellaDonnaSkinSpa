@@ -1,3 +1,5 @@
+<%= render 'shared/form_errors', :object => @promotion %>
+
 <%= form_for @promotion, :html => {:id => "new_promotion", :class => "form form-inline"}, remote: true do |f| %>
 <a class="close" href="">X</a>
 <h2>Add a Promotion</h2>

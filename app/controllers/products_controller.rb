@@ -20,13 +20,13 @@ class ProductsController < ApplicationController
     end
   end
 
-  def edit
-    @product = product.find(params[:id])
-    redirect_to products_path
-  end
+  # def edit
+  #   @product = product.find(params[:id])
+  #   redirect_to products_path
+  # end
 
-  def update
-  end
+  # def update
+  # end
 
   def destroy
     @product = Product.destroy(params[:id])

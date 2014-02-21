@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   protected 
   def is_admin?
-    current_user.email == "pyluftig@gmail.com" || current_user.email == "carla13cruz@gmail.com" || current_user.email == "bellaDonna7@comcast.net"
+    if current_user && current_user.email == "pyluftig@gmail.com" || current_user && current_user.email == "carla13cruz@gmail.com" || current_user && current_user.email == "bellaDonna7@comcast.net"
+      true
+    else
+      flash[:alert] = "Sorry. You do not have the correct administrative access to view the page you are trying to access."
+      redirect_to root_path
+    end
   end
 end
