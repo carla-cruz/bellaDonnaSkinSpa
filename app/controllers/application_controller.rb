@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 
   protected 
   def is_admin?
-    current_user.email == "pyluftig@gmail.com" || current_user.email == "carla13cruz@gmail.com" || current_user.email == " bellaDonna7@comcast.net"
+    current_user.email == "pyluftig@gmail.com" || current_user.email == "carla13cruz@gmail.com" || current_user.email == "bellaDonna7@comcast.net"
   end
 end
