@@ -16,6 +16,8 @@ BellaDonna::Application.routes.draw do
     get 'thank_you', :on => :collection
   end
 
+resources :appointments
+
   resources :promotions
   get '/promotions/:id/activate_promotion' => 'promotions#activate_promotion', :as => :activate_promotion
 end

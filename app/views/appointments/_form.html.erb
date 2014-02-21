@@ -1,0 +1,50 @@
+<%= form_for appointment do |f| %>
+
+<div>
+  <%= f.label :first_name %><br/>
+  <%= f.text_field :first_name %>
+</div>
+<div>
+  <%= f.label :last_name %><br/>
+  <%= f.text_field :last_name %>
+</div>
+
+<div>
+  <%= f.label :phone_number %><br/>
+  <%= f.text_field :phone_number %>
+</div>
+
+<div>
+  <%= label_tag ("Type of Appointment") %><br/>
+  <%= f.text_field :appointment_type %>
+</div>
+
+
+    <div class="input-daterange input-group col-md-10" id="datepicker">
+    <input type="text" class="input-sm form-control" name="start" />
+    <span class="input-group-addon">to</span>
+    <input type="text" class="input-sm form-control" name="end" />
+    </div>
+
+<div>
+second date/time choice
+</div>
+
+<div>
+third date/time choice
+</div>
+
+<div>
+  <%= f.label :comments %><br/>
+  <%= f.text_field :comments %>
+</div>
+
+<div>
+<%= check_box_tag (:is_new) %>
+  <%= label_tag ("I am a new customer") %>
+</div>
+
+<div>
+  <%= f.submit "Submit Request" %>
+</div>
+<% end %>

@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218201100) do
+ActiveRecord::Schema.define(version: 20140221030850) do
+
+  create_table "appointments", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "phone_number"
+    t.boolean  "is_new"
+    t.date     "first_date"
+    t.time     "first_time"
+    t.date     "second_date"
+    t.time     "second_time"
+    t.date     "third_date"
+    t.time     "third_time"
+    t.string   "appointment_type"
+    t.text     "comments"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -37,6 +54,7 @@ ActiveRecord::Schema.define(version: 20140218201100) do
     t.string   "name"
     t.text     "description"
     t.decimal  "price",                   precision: 10, scale: 2
+    t.string   "brand"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "sort_order"
