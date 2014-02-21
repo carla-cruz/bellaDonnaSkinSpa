@@ -4,6 +4,8 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
+    @skin_services = Service.where('kind = ?', 'skin')
+    @sugaring_services = Service.where('kind = ?', 'sugaring')
   end
 
   def new
