@@ -16,7 +16,7 @@
 
 <div>
   <%= f.label :appointment_type %><br/>
-  <%= f.select(Service.all, :id, :title ) %>
+  <%= f.select :appointment_type, options_for_select(@services.map{ |i| [i.title, i.id] }) %>
 </div>
 <div>
   <%= f.label :first_choice %><br />
