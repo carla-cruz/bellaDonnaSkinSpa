@@ -13,6 +13,8 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'nested_form'
 gem 'pony'
+gem 'jquery-ui-rails'
+gem "combined_time_select", "~> 1.0.1"
 # gem 'protected_attributes'
 
 group :development do

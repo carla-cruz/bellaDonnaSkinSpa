@@ -8,6 +8,9 @@ class AppointmentsController < ApplicationController
 	end
 
 	def create
+		params[:appointment].parse_time_select! :first_time
+		params[:appointment].parse_time_select! :second_time
+		params[:appointment].parse_time_select! :third_time
 		@appointment = Appointment.create!(appointment_params)
 		if @appointment.save
 			flash[:alert] = "Your request has been sent!"

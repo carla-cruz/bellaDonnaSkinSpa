@@ -1,4 +1,4 @@
-<%= form_for appointment do |f| %>
+<%= form_for @appointment do |f| %>
 
 <div>
   <%= f.label :first_name %><br/>
@@ -18,20 +18,49 @@
   <%= label_tag ("Type of Appointment") %><br/>
   <%= f.text_field :appointment_type %>
 </div>
-
-
-    <div class="input-daterange input-group col-md-10" id="datepicker">
-    <input type="text" class="input-sm form-control" name="start" />
-    <span class="input-group-addon">to</span>
-    <input type="text" class="input-sm form-control" name="end" />
-    </div>
-
 <div>
-second date/time choice
+  <%= f.label :first_choice %><br />
+  <%= date_select :appointment, :first_date %>
+  <%= f.time_select :first_time,
+  :combined => true,
+  :default => Time.now.change(:hour => 11, :min => 30),
+  :minute_interval => 15,
+  :time_separator => "",
+  :start_hour => 10,
+  :start_minute => 30,
+  :end_hour => 14,
+  :end_minute => 30
+%>
 </div>
 
 <div>
-third date/time choice
+  <%= f.label :second_choice %><br />
+  <%= date_select :appointment, :second_date %>
+  <%= f.time_select :second_time,
+  :combined => true,
+  :default => Time.now.change(:hour => 11, :min => 30),
+  :minute_interval => 15,
+  :time_separator => "",
+  :start_hour => 10,
+  :start_minute => 30,
+  :end_hour => 14,
+  :end_minute => 30
+%>
+</div>
+
+<div>
+  <%= f.label :third_choice %><br />
+  <%= date_select :appointment, :third_date %>
+  <%= f.time_select :third_time,
+  :combined => true,
+  :default => Time.now.change(:hour => 11, :min => 30),
+  :minute_interval => 15,
+  :time_separator => "",
+  :start_hour => 10,
+  :start_minute => 30,
+  :end_hour => 14,
+  :end_minute => 30
+%>
 </div>
 
 <div>
@@ -40,11 +69,16 @@ third date/time choice
 </div>
 
 <div>
-<%= check_box_tag (:is_new) %>
-  <%= label_tag ("I am a new customer") %>
+  <%= f.label :I_am_a_new_ustomer %>
+  <%= f.check_box :is_new %>
 </div>
 
 <div>
   <%= f.submit "Submit Request" %>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#datepicker').datepicker (dateFormat: 'dd-mm-yy')
+})
+</script>
 <% end %>
