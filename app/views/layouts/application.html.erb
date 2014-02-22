@@ -17,11 +17,11 @@
     <p class="alert alert-info"><%= notice %></p>
     <% end %>
     <% if flash[:alert] %>
-    <p class="alert"><%= alert %></p>
+    <p class="alert alert-warning"><%= alert %></p>
     <% end %>
     <% if flash[:error] %>
     <ul>
-      <div class="alert"><% flash[:error].each do |error| %>
+      <div class="alert alert-warning"><% flash[:error].each do |error| %>
         <li><%= error %></li>
         <% end %>
       </div>

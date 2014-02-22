@@ -1,4 +1,4 @@
-<div class="site-container promotions container">
+<div class="promotions container">
 	<%if user_signed_in? && is_admin? %>
 	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true %>
 	<br><br>
@@ -31,7 +31,6 @@
 				<h2><%= p.header %></h2>
 				<p><%= p.subheader %></p>
 				<p>Date: <%= p.created_at.strftime("%d %b. %Y") %></p>
-				<hr>
 			</li>
 		</div>
 		<% end %>

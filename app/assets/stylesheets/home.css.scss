@@ -4,6 +4,8 @@
 @media screen and (max-width: 825px){
 	.home{
 	min-height:350px !important;
+	background: url('/assets/womans_face_small.jpg') no-repeat center -50px !important;
+	background-color:#FEEFC5 !important;
 
 		#promotions {
 		margin: 0 auto !important;
@@ -11,8 +13,10 @@
 	}
 
 	#mainCategories{
+	max-width:475px;
+
 		img{
-		max-width:75px !important;
+		width:75px !important;
 		}
 
 		h2{
@@ -22,16 +26,13 @@
 }
 
 .home{
+background: url('/assets/womans_face.jpg') no-repeat center -100px;
+background-color:#FEEFC5;
 overflow:hidden;
-min-height:600px;
+min-height:630px;
 position:relative;
 width:auto;
 
-	img{
-	position:relative;
-	margin:-595px auto;
-	min-height:615px;
-	}
 
 	#promotions {
 	background-color: rgba(0,0,0,.6);

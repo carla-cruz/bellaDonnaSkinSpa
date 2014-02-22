@@ -11,17 +11,12 @@ margin-left: 25%;
 margin-top: 7%;
 }*/
 
-h1, h2, h3{line-height:1.0;}
-
-	h2{
-	color: $primary-highlight;
-	}
 
 #product_list{
 	img{margin-top:15px;}
 }
 
-/* Contact Page */
+/*/// Contact Page ///*/
 
 #contactBackground{
 background:url('/assets/lotus.jpg')repeat-x center center;	
@@ -39,4 +34,27 @@ width:100%;
 	color:#feefc5;
 	padding:10px;
 	}
+}
+
+
+/*/// User Sign-In Page ///*/
+#LogInPage {
+	float:none;
+
+	div:first-of-type{
+	float:none;
+	padding-bottom:10px;
+	}
+
+}
+
+
+/*/// Policies Page ///*/
+
+#policy_list, #promotion_list {
+	margin-top:20px;
+}
+
+.promotion li{
+	margin:15px;
 }

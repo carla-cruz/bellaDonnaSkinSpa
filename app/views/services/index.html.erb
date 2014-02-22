@@ -1,4 +1,4 @@
-<div class="site-container services container">
+<div class="services container">
   <%if user_signed_in? && is_admin? %>
   <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
   <br><br>
@@ -19,7 +19,7 @@
 
       <div class="tab-pane active" id="skin">
 
-        <div class="jumbotron">
+        <div class="jumbotron hidden-xs">
           <h1>Skin</h1>
         </div>
 
@@ -40,7 +40,7 @@
 
       <div class="tab-pane" id="sugaring">
 
-        <div class="jumbotron">
+        <div class="jumbotron hidden-xs">
           <h1>Sugaring</h1>
         </div>
 
