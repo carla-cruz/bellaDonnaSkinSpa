@@ -5,6 +5,7 @@ class AppointmentsController < ApplicationController
 
 	def new
 		@appointment = Appointment.new
+		@services = Service.all
 	end
 
 	def create

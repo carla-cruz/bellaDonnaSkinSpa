@@ -15,12 +15,12 @@
 </div>
 
 <div>
-  <%= label_tag ("Type of Appointment") %><br/>
-  <%= f.text_field :appointment_type %>
+  <%= f.label :appointment_type %><br/>
+  <%= f.select(Service.all, :id, :title ) %>
 </div>
 <div>
   <%= f.label :first_choice %><br />
-  <%= date_select :appointment, :first_date %>
+  <%= date_select :appointment, :first_date, :discard_year => true %>
   <%= f.time_select :first_time,
   :combined => true,
   :default => Time.now.change(:hour => 11, :min => 30),
@@ -30,12 +30,12 @@
   :start_minute => 30,
   :end_hour => 14,
   :end_minute => 30
-%>
+  %>
 </div>
 
 <div>
   <%= f.label :second_choice %><br />
-  <%= date_select :appointment, :second_date %>
+  <%= date_select :appointment, :second_date, :discard_year => true %>
   <%= f.time_select :second_time,
   :combined => true,
   :default => Time.now.change(:hour => 11, :min => 30),
@@ -45,12 +45,12 @@
   :start_minute => 30,
   :end_hour => 14,
   :end_minute => 30
-%>
+  %>
 </div>
 
 <div>
   <%= f.label :third_choice %><br />
-  <%= date_select :appointment, :third_date %>
+  <%= date_select :appointment, :third_date, :discard_year => true %>
   <%= f.time_select :third_time,
   :combined => true,
   :default => Time.now.change(:hour => 11, :min => 30),
@@ -60,7 +60,7 @@
   :start_minute => 30,
   :end_hour => 14,
   :end_minute => 30
-%>
+  %>
 </div>
 
 <div>
