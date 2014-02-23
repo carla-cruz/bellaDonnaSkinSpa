@@ -12,7 +12,6 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="main"><%= link_to "Schedule an Appointment", new_appointment_path, class: cp(new_appointment_path) %></li>
-            <li class="main"><%= link_to "My Appointments", appointments_path, class: cp(appointments_path) %></li>
             <li class="main"><%= link_to "About", about_path, class: cp(about_path) %></li>
             <li class="main"><%= link_to "Products", products_path, class: cp(products_path) %></li>
             <li class="main"><%= link_to "Policies", policies_path, class: cp(policies_path) %></li>
@@ -20,6 +19,8 @@
             <li class="main"><%= link_to "Promotions", promotions_path, class: cp(promotions_path) %></li>
             <li class="main"><%= link_to "Contact", new_inquiry_path, class: cp(new_inquiry_path) %></li>
             <% if user_signed_in? && is_admin? %>
+            <li class="main"><%= link_to "My Appointments", appointments_path, class: cp(appointments_path) %></li>
+            
               <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
             <% end %>
           </ul>
