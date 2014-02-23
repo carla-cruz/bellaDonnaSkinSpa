@@ -1,0 +1,25 @@
+<div class="site-container appointments container">
+
+  <ul id="appointment_list">
+    <% @appointment.each do |a| %>
+    <div class="col-md-3 appointment">
+      <li>
+        <p><%= a.created_at %></p>
+        <p><%= a.first_name %>
+        <%= a.last_name %></p>
+        <p><%= a.phone_number %></p>
+        <p>New client?: <%= a.is_new %></p>
+        <p>First choise:<%= a.first_date %>
+        <%= a.first_time %></p>
+        <p>Second choice:<%= a.second_date %>
+        <%= a.second_time %></p>
+        <p>Third choice:<%= a.third_date %>
+        <%= a.third_time %></p>
+        <p>Interested in:<%= a.appointment_type %></p>
+        <p>Client comments:<%= a.comments %></p>
+        <%= link_to "Delete", a, method: :delete, class: "delete_link btn btn-danger", remote: true %>
+      </div>
+    </li> 
+    <% end %>
+  </ul>
+</div>

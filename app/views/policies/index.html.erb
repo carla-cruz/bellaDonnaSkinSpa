@@ -1,11 +1,16 @@
 <div class="site-container policies container">
+	<div>
 	<%if user_signed_in? && is_admin? %>
 	<%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true %>
 	<br><br>
 <% end %>
+    </div>
 
+<div>
+	<div>
+    <h1>Our Policies</h1>
 	<ul id="policy_list">
-		<div class="col-md-12 promotion">
+		<div class="col-md-12 policy">
 		<% @policies.each do |p| %>
 		<li><h2><%= p.name %></h2><p><%= p.description %></p>
 			<%if user_signed_in? && is_admin? %>
@@ -16,4 +21,6 @@
 		<% end %>
 	</div>
 	</ul>
+</div>
+</div>
 </div>
