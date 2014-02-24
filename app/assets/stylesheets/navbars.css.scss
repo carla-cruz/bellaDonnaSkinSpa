@@ -1,6 +1,5 @@
 .navbar {
   margin-bottom: 0 !important;
-  height: 10px !important;
   border: none;
   border-radius: 0;
   background: #db572b;
@@ -32,4 +31,12 @@
   }
 
 
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form, .navbar-inverse .navbar-toggle {
+    border-color: #e06c39;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color:#e06c39;
 }

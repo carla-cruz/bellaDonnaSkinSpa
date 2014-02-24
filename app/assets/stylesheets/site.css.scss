@@ -19,7 +19,8 @@ margin-top: 7%;
 /*/// Contact Page ///*/
 
 #contactBackground{
-background:url('/assets/lotus.jpg')repeat-x center center;	
+background:url('/assets/lotus.jpg')no-repeat center center;	
+background-color: $head-bg-color;
 height:675px;
 margin:0 auto;
 width:100%;
@@ -55,6 +56,33 @@ width:100%;
 	margin-top:20px;
 }
 
-.promotion li{
+
+.promotion{
+    border: 1px solid #db572b;
+	height: 260px;
 	margin:15px;
 }
+
+
+/*/// Appointment Page ///*/
+
+.appointments {
+  ul li {
+    height: auto;
+    margin:15px;
+    padding: 10px;
+    border: 1px solid #db572b;
+  }
+}
+
+#appointment_list {
+	p {
+	display:inline-block;
+	}
+
+	span {
+	display:block;
+	width:25%;
+	}
+}
+

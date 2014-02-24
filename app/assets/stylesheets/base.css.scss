@@ -8,7 +8,10 @@ color:#454545;
 
 h1, h2, h3{line-height:1.0;}
 
-  h1{color: $primary-orange;}
+  h1{
+  background-color: #FEEFC5;
+  padding:7px;
+  }
 
   h2{
   color: $primary-highlight;
