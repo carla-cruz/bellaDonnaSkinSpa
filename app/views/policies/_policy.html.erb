@@ -1,1 +1,4 @@
-<li><h2><%= @policy.name %></h2><p><%= @policy.description %></p><%= link_to "Delete", @policy, method: :delete %></li>
+<li><h2><%= @policy.name %></h2><p><%= @policy.description %></p>
+  <%= link_to "Delete", @policy, method: :delete %>
+  <%= link_to "Edit", edit_policy_path(@policy) %>
+</li>

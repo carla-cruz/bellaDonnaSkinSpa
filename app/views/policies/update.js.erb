@@ -1,0 +1,16 @@
+$('form').hide();
+$('#new_policy_link').show();
+$('.edit_link').show();
+$('ul#policy_list').append('<%= j render(@policy) %>');
+
+// <% if @policy.errors.count == 0 %>
+
+// $('#new_policy_link').hide().after('<%= j render("form") %>');
+
+// <% else %>
+
+// $('.edit_policy').remove();
+// $('#new_policy_link').after('<%= j render("form") %>');
+
+// <% end %>
+

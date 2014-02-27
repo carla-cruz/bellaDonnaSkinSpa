@@ -1,1 +1,1 @@
-$("#form > form").replaceWith("<%= escape_javascript(render(:partial => "form"))%>")
+$('#new_policy_link').hide().after('<%= j render("form") %>');
