@@ -1,6 +1,7 @@
 $('form').hide();
 $('#new_policy_link').show();
 $('.edit_link').show();
+$(this).find('li').remove();
 $('ul#policy_list').append('<%= j render(@policy) %>');
 
 // <% if @policy.errors.count == 0 %>
