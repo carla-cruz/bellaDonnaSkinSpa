@@ -2,6 +2,7 @@
   <li>
     <h2><%= @promotion.header %></h2>
     <p><%= @promotion.subheader %></p>
+    <p><%= @promotion.description %></p>
     <p>Date: <%= @promotion.created_at.strftime("%d %b. %Y") %></p>
     <p>Promotion is: <%= @promotion.is_active == true ? "ACTIVE" : "INACTIVE" %></p>
     <%= link_to "Make Active", activate_promotion_path(@promotion.id), class: "btn btn-success" %>

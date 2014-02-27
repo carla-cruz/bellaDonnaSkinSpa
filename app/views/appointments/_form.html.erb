@@ -2,25 +2,25 @@
 
 <div>
   <%= f.label :first_name %><br/>
-  <%= f.text_field :first_name %>
+  <%= f.text_field :first_name, :class => 'form-control' %>
 </div>
 <div>
   <%= f.label :last_name %><br/>
-  <%= f.text_field :last_name %>
+  <%= f.text_field :last_name, :class => 'form-control' %>
 </div>
 
 <div>
   <%= f.label :phone_number %><br/>
-  <%= f.text_field :phone_number %>
+  <%= f.text_field :phone_number, :class => 'form-control'  %>
 </div>
 
 <div>
   <%= f.label :appointment_type %><br/>
-  <%= f.select :appointment_type, options_for_select(@services.map{ |i| [i.title, i.id] }) %>
+  <%= f.select :appointment_type, options_for_select(@services.map{ |i| [i.title, i.id] }), :class => 'form-control'  %>
 </div>
 <div>
   <%= f.label :first_choice %><br />
-  <%= date_select :appointment, :first_date, :discard_year => true %>
+  <%= date_select :appointment, :first_date, :discard_year => true, :class => 'form-control' %>
   <%= f.time_select :first_time,
   :combined => true,
   :default => Time.now.change(:hour => 11, :min => 30),
@@ -65,16 +65,16 @@
 
 <div>
   <%= f.label :comments %><br/>
-  <%= f.text_field :comments %>
+  <%= f.text_field :comments, :class => 'form-control' %>
 </div>
 
 <div>
-  <%= f.label :I_am_a_new_ustomer %>
   <%= f.check_box :is_new %>
+  <%= f.label :I_am_a_new_customer %>
 </div>
 
 <div>
-  <%= f.submit "Submit Request" %>
+  <%= f.submit "Submit Request", :class => 'btn btn-success' %>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){

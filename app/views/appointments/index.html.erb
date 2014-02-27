@@ -4,13 +4,13 @@
 
   <ul id="appointment_list">
     <% @appointment.each do |a| %>
-    <div class="col-md-3 appointment">
+    <div class="col-sm-6 appointment">
       <li>
         <span>Created:</span> 
             <p><%= a.created_at %></p>
         <span>Client Name:</span> 
             <p><%= a.first_name %> <%= a.last_name %></p>
-        <span>Client Phone Number:</span> 
+        <span>Phone Number:</span> 
             <p><%= a.phone_number %></p>
         <span>New or Returning Client:</span> 
             <p><%= a.is_new %></p>
@@ -24,7 +24,7 @@
             <p><%= a.appointment_type %></p>
         <span>Client Comments:</span>
             <p><%= a.comments %></p>
-        <%= link_to "Delete", a, method: :delete, class: "delete_link btn btn-danger", remote: true %>
+        <%= link_to "Delete Appointment", a, method: :delete, class: "delete_link btn btn-danger", remote: true %>
       </div>
     </li> 
     <% end %>

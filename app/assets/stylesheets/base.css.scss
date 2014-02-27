@@ -9,7 +9,7 @@ color:#454545;
 h1, h2, h3{line-height:1.0;}
 
   h1{
-  background-color: #FEEFC5;
+  background-color: #f2f1f1;
   padding:7px;
   }
 
@@ -41,6 +41,12 @@ h1, h2, h3{line-height:1.0;}
   color: #b4997d;
   background-color: #f4f1ee;
   outline: none !important;
+  }
+
+    .form-control:focus {
+    border-color: $primary-orange;
+    box-shadow: 0 1px 1px rgba(242, 131, 82, 0.075) inset, 0 0 8px rgba(219, 87, 43, 0.6);
+    outline: 0 none;
   }
 
 } 
