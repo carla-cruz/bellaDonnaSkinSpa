@@ -49,7 +49,7 @@ class PromotionsController < ApplicationController
 	private
 
 	def promotion_params
-		params.require(:promotion).permit(:header, :subheader, :is_active)
+		params.require(:promotion).permit(:header, :subheader, :is_active, :description)
 	end
 
 	def clear_promotion_list 

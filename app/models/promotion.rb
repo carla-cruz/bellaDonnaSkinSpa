@@ -1,3 +1,3 @@
 class Promotion < ActiveRecord::Base
-  validates :header, :subheader, presence: true
+  validates :header, :subheader, :description, presence: true
 end
