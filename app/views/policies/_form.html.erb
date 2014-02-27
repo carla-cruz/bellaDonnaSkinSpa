@@ -1,7 +1,19 @@
 <%= render 'shared/form_errors', :object => @policy %>
 
+<% if @policy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@policy.errors.count, "error") %> prohibited this policy from being saved:</h2>
+
+      <ul>
+      <% @policy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <%= form_for @policy, :html => {:id => "new_policy", :class => "form form-inline"}, remote: true do |f| %>
-<h2>Add New Policy</h2>
+<h2>Add or Edit Policy</h2>
 <a class="close" href="">X</a>
 <div class="form-group">
  <%= f.text_field :name, class: "form-control", placeholder: "Policy Name" %>
@@ -9,6 +21,6 @@
  <div class="form-group">
  <%= f.text_field :description, class: "form-control", placeholder: "Policy Desciption" %>
 </div>
- <%= f.submit "Add Policy", class: "btn btn-primary" %>
+ <%= f.submit class: "btn btn-primary" %>
  
  <% end %>
