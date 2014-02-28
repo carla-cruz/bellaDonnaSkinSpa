@@ -1,17 +1,5 @@
 $('form').hide();
 $('#new_policy_link').show();
 $('.edit_link').show();
-$(this).find('li').remove();
-$('ul#policy_list').append('<%= j render(@policy) %>');
-
-// <% if @policy.errors.count == 0 %>
-
-// $('#new_policy_link').hide().after('<%= j render("form") %>');
-
-// <% else %>
-
-// $('.edit_policy').remove();
-// $('#new_policy_link').after('<%= j render("form") %>');
-
-// <% end %>
+$('#policy_list li:last-child').append('<%= j render(@policy) %>');
 

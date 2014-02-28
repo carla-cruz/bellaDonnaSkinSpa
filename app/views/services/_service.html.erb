@@ -3,4 +3,6 @@
     <p><%= @service.duration %></p>
     <p>$<%= @service.price %>0</p>
     <p><%= @service.kind %></p>
-    <p><%= link_to "Delete", @service, method: :delete, class: "delete_link", remote: true %></p></li>
+    <p><%= link_to "Delete", @service, method: :delete, class: "delete_link", remote: true %></p>
+    <p><%= link_to "Edit", edit_service_path(@service) %></li></p>
+  </li>

@@ -5,6 +5,7 @@
   <% @product.categories.each do |cat| %>
   <p><%= cat.name %></p>
   <% end %>
-  <p><%= link_to "Delete", @product, method: :delete, class: "delete_link", remote: true %></p></li>
+  <%= link_to "Delete", @product, method: :delete, class: "delete_link" %>
+  <%= link_to "Edit", edit_product_path(@product) %></li>
   <hr>
 

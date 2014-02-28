@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20140227052013) do
     t.string   "name"
     t.text     "description"
     t.decimal  "price",                   precision: 10, scale: 2
-    t.string   "brand"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "image_url",   limit: 350

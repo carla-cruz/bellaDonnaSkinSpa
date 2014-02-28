@@ -20,13 +20,23 @@ class ProductsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @product = product.find(params[:id])
-  #   redirect_to products_path
-  # end
+  def edit
+    @product = Product.find(params[:id])
+  end
 
-  # def update
-  # end
+  def update
+    @product = Product.find(params[:id])
+    p "*" * 100
+    respond_to do |format|
+      if @product.update_attributes(product_params)
+        format.html { redirect_to products_path, notice: 'product was successfully updated.' }
+        format.js
+      else
+        format.html { render action: "edit" }
+        format.js
+      end
+    end
+  end
 
   def destroy
     @product = Product.destroy(params[:id])

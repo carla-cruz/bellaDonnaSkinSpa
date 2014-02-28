@@ -33,7 +33,9 @@
           <p><%= s.kind %></p>
 
           <%if user_signed_in? && is_admin? %>
-          <p><%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %></p>
+          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+          
           <% end %>
           <% end %>
           <hr>
@@ -56,7 +58,9 @@
           <p><%= s.kind %></p>
 
           <%if user_signed_in? && is_admin? %>
-          <p><%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %></p>
+          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+
           <% end %>
           <% end %>
           <hr>
