@@ -26,7 +26,6 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    p "*" * 100
     respond_to do |format|
       if @product.update_attributes(product_params)
         format.html { redirect_to products_path, notice: 'product was successfully updated.' }

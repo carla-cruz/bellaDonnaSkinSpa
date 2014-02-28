@@ -1,10 +1,10 @@
 <div class="site-container products container">
-    <div>
-      <%if user_signed_in? && is_admin? %>
-      <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
-      <br><br>
-      <% end %>
-    </div>
+  <div>
+    <%if user_signed_in? && is_admin? %>
+    <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
+    <br><br>
+    <% end %>
+  </div>
   <div>
     <h1>Our Products</h1>
     <ul class="col-sm-12" id="product_list">
@@ -12,17 +12,21 @@
       <li class="col-sm-6">
        <%= image_tag(p.image_url, class: "img-responsive") %>
        <h2><%= p.name %></h2>
+       <p class="product-price">$<%= p.price %></p>
        <p><strong><%= p.description %></strong></p>
-       <p>$<%= p.price %></p>
+       
        
        <% p.categories.each do |cat| %>
        <p><%= cat.name %></p>
        <% end %>
        <%if user_signed_in? && is_admin? %>
-       <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
-       <%= link_to "Edit", edit_product_path(p), class: "edit_link", remote: true %>
-      <% end %>
-     
+       <div class="admin-links">
+         <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+         <%= link_to "Edit", edit_product_path(p), class: "edit_link", remote: true %>
+       </div>
+
+       <% end %>
+
      </li>
      <% end %>
    </ul>

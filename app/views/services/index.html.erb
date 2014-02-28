@@ -27,14 +27,18 @@
 
         <% @skin_services.each do |s| %>
         <li class="service-box col-md-6"><h1><%= s.title %></h1>
+          <p class="service-duration"><%= s.duration %></p>
+          <p class="service-price">$<%= s.price %></p>
           <p><%= s.description %></p>
-          <p><%= s.duration %></p>
-          <p>$<%= s.price %></p>
-          <p><%= s.kind %></p>
+          
+          
+          
 
           <%if user_signed_in? && is_admin? %>
-          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-          <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+          <div class="admin-links">
+            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+          </div>
           
           <% end %>
           <% end %>
@@ -52,14 +56,15 @@
 
         <% @sugaring_services.each do |s| %>
         <li class="service-box col-md-6"><h1><%= s.title %></h1>
+          <p class="service-duration"><%= s.duration %></p>
+          <p class="service-price">$<%= s.price %></p>
           <p><%= s.description %></p>
-          <p><%= s.duration %></p>
-          <p>$<%= s.price %></p>
-          <p><%= s.kind %></p>
 
           <%if user_signed_in? && is_admin? %>
-          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-          <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+          <div class="admin-links">
+            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+          </div>
 
           <% end %>
           <% end %>

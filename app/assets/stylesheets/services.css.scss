@@ -1,2 +1,17 @@
 @import '_variables';
 
+.services {
+  .service-price, .service-duration {
+    
+    display: inline-block;
+  }
+
+  h1 {
+    display: inline-block;
+    
+  }
+
+  .admin-links {
+    float: right;
+  }
+}
