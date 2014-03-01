@@ -7,7 +7,17 @@ Policy.create(name: "Quiet Please", description: "To maintain a peaceful atmosph
   Product.create(name: "Product #{i}", price: i, description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.", image_url: "http://www.seagullhair.com/Images/photos/moroccan-oil-store-products.jpg")
 end
 
+ServiceType.create!(name: "Skin Treatments", description: "His utinam eleifend ea, his inermis intellegebat ne, ea everti iisque usu. Dicant doctus diceret ei per, ad eum nisl appellantur. Mel ex mazim voluptua, mea vide delicata referrentur at. Has ne inimicus laboramus, an propriae consetetur usu. Ut eum detraxit petentium.", image_url: "assets/legs.jpg")
 1.upto(10) do |i|
-  @service = Service.new(kind: "Kind #{i}", title: "Service number #{i}", duration: "#{i} minutes", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.", price: i)
-  @service.save
+  Service.create!(service_type_id: ServiceType.last.id, title: "Service #{i}", duration: "#{i}0 minutes", price: "$#{i}0.00", description: "Lorem ipsum dolor sit amet, ad nam suas habeo, sea probo tation appareat ut, error possit habemus ut sea. Erat deseruisse assueverit et quo, ad suas ferri iusto pro. Fuisset adipiscing usu an, vim cu ipsum voluptatum inciderint. Pro ut commodo iracundia, alii solum et vel, nulla oblique no cum. Tale commodo petentium nec et, usu eripuit luptatum ea.")
+end
+
+ServiceType.create!(name: "Body Sugaring", description: "His utinam eleifend ea, his inermis intellegebat ne, ea everti iisque usu. Dicant doctus diceret ei per, ad eum nisl appellantur. Mel ex mazim voluptua, mea vide delicata referrentur at. Has ne inimicus laboramus, an propriae consetetur usu. Ut eum detraxit petentium.", image_url: "assets/legs.jpg")
+11.upto(20) do |i|
+  Service.create!(service_type_id: ServiceType.last.id, title: "Service #{i}", duration: "#{i}0 minutes", price: "$#{i}0.00", description: "Lorem ipsum dolor sit amet, ad nam suas habeo, sea probo tation appareat ut, error possit habemus ut sea. Erat deseruisse assueverit et quo, ad suas ferri iusto pro. Fuisset adipiscing usu an, vim cu ipsum voluptatum inciderint. Pro ut commodo iracundia, alii solum et vel, nulla oblique no cum. Tale commodo petentium nec et, usu eripuit luptatum ea.")
+end
+
+ServiceType.create!(name: "Another Spa Service Type", description: "His utinam eleifend ea, his inermis intellegebat ne, ea everti iisque usu. Dicant doctus diceret ei per, ad eum nisl appellantur. Mel ex mazim voluptua, mea vide delicata referrentur at. Has ne inimicus laboramus, an propriae consetetur usu. Ut eum detraxit petentium.", image_url: "assets/legs.jpg")
+21.upto(30) do |i|
+  Service.create!(service_type_id: ServiceType.last.id, title: "Service #{i}", duration: "#{i}0 minutes", price: "$#{i}0.00", description: "Lorem ipsum dolor sit amet, ad nam suas habeo, sea probo tation appareat ut, error possit habemus ut sea. Erat deseruisse assueverit et quo, ad suas ferri iusto pro. Fuisset adipiscing usu an, vim cu ipsum voluptatum inciderint. Pro ut commodo iracundia, alii solum et vel, nulla oblique no cum. Tale commodo petentium nec et, usu eripuit luptatum ea.")
 end
