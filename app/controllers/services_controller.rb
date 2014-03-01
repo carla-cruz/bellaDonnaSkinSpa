@@ -4,12 +4,17 @@ class ServicesController < ApplicationController
 
   def index
     @services = Service.all
-    @skin_services = Service.where('kind = ?', 'skin')
-    @sugaring_services = Service.where('kind = ?', 'sugaring')
+    @service_types = ServiceType.all
+    @inactive_service_types = []
+    @service_types.each_with_index do |type, index| 
+      @inactive_service_types << type if index != 0
+    end
+    
   end
 
   def new
     @service = Service.new
+    @service_types = ServiceType.all
   end
 
   def create
@@ -49,7 +54,7 @@ class ServicesController < ApplicationController
   private
 
   def service_params
-    params.require(:service).permit(:kind, :title, :description, :duration, :price)
+    params.require(:service).permit(:kind, :title, :description, :duration, :price, :service_type_id)
   end
 end
 

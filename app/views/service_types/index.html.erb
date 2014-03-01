@@ -1,0 +1,22 @@
+<div class="service_types container">
+  <%if user_signed_in? && is_admin? %>
+  <%= link_to "Add a Service", new_service_type_path, id: "new_service_type_link", remote: true %>
+  <br><br>
+  <% end %>
+
+  <% @service_types.each do |st| %>
+  <ul id="service_type_list" class="nav nav-tabs"> 
+    <li><%= st.name %></li>
+    <li><%= st.description %></li>
+    
+
+    <%if user_signed_in? && is_admin? %>
+    <div class="admin-links">
+      <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
+      <%= link_to "Edit", edit_service_type_path(st), class: "edit_link", remote: true %>
+    </div>
+    <% end %>
+    <% end %>
+
+  </div>
+

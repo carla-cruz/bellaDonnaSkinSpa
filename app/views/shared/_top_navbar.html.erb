@@ -19,6 +19,7 @@
             <li class="main"><%= link_to "Contact", new_inquiry_path, class: cp(new_inquiry_path) %></li>
             <% if user_signed_in? && is_admin? %>
             <li class="main"><%= link_to "Promotions", promotions_path, class: cp(promotions_path) %></li>
+            <li class="main"><%= link_to "Service Types", service_types_path, class: cp(service_types_path) %></li>
 
             <li class="main"><%= link_to "My Appointments", appointments_path, class: cp(appointments_path) %></li>
             

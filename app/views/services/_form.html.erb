@@ -17,10 +17,7 @@
 </div>
 
 <div class="form-group">
-  <select name="service[kind]">
-    <option>sugaring</option>
-    <option>skin</option>
-  </select>
+  <%= f.select(:service_type_id, @service_types.collect {|st| [st.name, st.id]}, :prompt => 'Select') %>
 </div>
 
 <%= f.submit class: "btn btn-primary" %>

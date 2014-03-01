@@ -5,72 +5,50 @@
   <% end %>
   
 
-  <ul class="col-8-md" id="service_list">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#<%= @service_types.first.name.delete(' ') %>" data-toggle="tab"><%= @service_types.first.name %></a></li>
+    <% @inactive_service_types.each do |type| %>
+    <li><a href="#<%= type.name.delete(' ') %>" data-toggle="tab"><%= type.name %></a></li>
+    <% end %>
+  </ul>
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#skin" data-toggle="tab">Skin</a></li>
-      <li><a href="#sugaring" data-toggle="tab">Sugaring</a></li>
-    </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
 
-    
-    <div class="tab-content">
-      <!-- Tab panes -->
-
-      <div class="tab-pane active" id="skin">
-
-        <div class="jumbotron hidden-xs">
-          <h1>Skin</h1>
-        </div>
-
-        <h4>Say goodbye to cookie-cutter facials! Our Dermalogica skin treatments are 100% customized to your skin's needs with a thorough skin analysis, making it a personalized treatment created especially for your skin's needs! The perfect home care routine will be prescribed as your secret weapon to keeping your skin feeling healthy, balanced and replenished!</h4>
-
-        <% @skin_services.each do |s| %>
-        <li class="service-box col-md-6"><h1><%= s.title %></h1>
-          <p class="service-duration"><%= s.duration %></p>
-          <p class="service-price">$<%= s.price %></p>
-          <p><%= s.description %></p>
-          
-          
-          
-
-          <%if user_signed_in? && is_admin? %>
-          <div class="admin-links">
-            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
-          </div>
-          
-          <% end %>
-          <% end %>
-          <hr>
-        </li>
+    <div class="tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
+      <div>
+        <img src="<%= @service_types.first.image_url %>">
+        <h1><%= @service_types.first.name %></h1>
       </div>
-
-      <div class="tab-pane" id="sugaring">
-
-        <div class="jumbotron hidden-xs">
-          <h1>Sugaring</h1>
-        </div>
-
-        <h4>The art of body sugaring is a form of hair removal that originated in ancient Egypt when a smooth, hairless body was the standard of youth and beauty. Sugar paste is an <strong>all natural</strong> product made from sugar, lemon and water. Unlike waxing, sugar never adheres to live skin cells and is removed in the natural direction of hair growth; resulting in less pain, less breakage, less irritation, and fewer ingrown hairs. Sugaring is safe for all skin types, even the most sensitive. Great for any part of the body! </h4>
-
-        <% @sugaring_services.each do |s| %>
-        <li class="service-box col-md-6"><h1><%= s.title %></h1>
-          <p class="service-duration"><%= s.duration %></p>
-          <p class="service-price">$<%= s.price %></p>
-          <p><%= s.description %></p>
-
-          <%if user_signed_in? && is_admin? %>
-          <div class="admin-links">
-            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
-          </div>
-
-          <% end %>
-          <% end %>
-          <hr>
-        </li>
+      <h3><%= @service_types.first.description %></h3>
+      <ul>
+        <% @service_types.first.services.each do |s| %>
+          <li><%= s.title %></li>
+          <li><%= s.description %></li>
+          <li><%= s.duration %></li>
+          <li><%= s.price %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% @inactive_service_types.each do |type| %>
+    <div class="tab-pane" id="<%= type.name.delete(' ') %>">
+      <div>
+        <img src="<%= type.image_url %>">
+        <h1><%= type.name %></h1>
       </div>
-    </ul>
+      <h3><%= type.description %></h3>
+      <ul>
+        <% type.services.each do |s| %>
+          <li><%= s.title %></li>
+          <li><%= s.description %></li>
+          <li><%= s.duration %></li>
+          <li><%= s.price %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
   </div>
+
+</div>
 

@@ -1,5 +1,7 @@
 class Service < ActiveRecord::Base
 
-  validates :title, :price, :kind, presence: true
+  belongs_to :service_type
+
+  validates :title, :price, :description, presence: true
   validates :title, uniqueness: true
 end
