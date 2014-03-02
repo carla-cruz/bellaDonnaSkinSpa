@@ -21,3 +21,6 @@ ServiceType.create!(name: "Another Spa Service Type", description: "His utinam e
 21.upto(30) do |i|
   Service.create!(service_type_id: ServiceType.last.id, title: "Service #{i}", duration: "#{i}0 minutes", price: "$#{i}0.00", description: "Lorem ipsum dolor sit amet, ad nam suas habeo, sea probo tation appareat ut, error possit habemus ut sea. Erat deseruisse assueverit et quo, ad suas ferri iusto pro. Fuisset adipiscing usu an, vim cu ipsum voluptatum inciderint. Pro ut commodo iracundia, alii solum et vel, nulla oblique no cum. Tale commodo petentium nec et, usu eripuit luptatum ea.")
 end
+
+Promotion.create!(header: "Spa Facial Special", subheader: "25% Off Cash Payments", description: "January 15 - March 1")
+Promotion.create!(header: "Easter Weaster Special", subheader: "Free Body Treatments", description: "March through End of April")

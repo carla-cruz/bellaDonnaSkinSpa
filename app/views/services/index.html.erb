@@ -16,34 +16,48 @@
   <!-- Tab panes -->
   <div class="tab-content">
 
-    <div class="tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
+    <div class="col-md-12 tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
       <div>
-        <img src="<%= @service_types.first.image_url %>">
+        <img class="img-responsive" src="<%= @service_types.first.image_url %>">
         <h1><%= @service_types.first.name %></h1>
       </div>
       <h3><%= @service_types.first.description %></h3>
-      <ul>
+      <ul class="service_list">
         <% @service_types.first.services.each do |s| %>
-          <li><%= s.title %></li>
-          <li><%= s.description %></li>
-          <li><%= s.duration %></li>
-          <li><%= s.price %></li>
+          <li class="col-sm-6">
+          <h3><%= s.title %></h3>
+          <p class="service-duration"><%= s.duration %></p>
+          <p class="service-price"><%= s.price %></p>
+          <p><%= s.description %></p>
+          
+
+          <%if user_signed_in? && is_admin? %>
+            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
+          <% end %>
         <% end %>
       </ul>
     </div>
     <% @inactive_service_types.each do |type| %>
-    <div class="tab-pane" id="<%= type.name.delete(' ') %>">
+    <div class="col-md-12 tab-pane" id="<%= type.name.delete(' ') %>">
       <div>
-        <img src="<%= type.image_url %>">
+        <img class="img-responsive" src="<%= type.image_url %>">
         <h1><%= type.name %></h1>
       </div>
       <h3><%= type.description %></h3>
-      <ul>
+      <ul class="service_list">
         <% type.services.each do |s| %>
-          <li><%= s.title %></li>
-          <li><%= s.description %></li>
-          <li><%= s.duration %></li>
-          <li><%= s.price %></li>
+          <li class="col-md-6">
+          <h3><%= s.title %></h3>
+          <p class="service-duration"><%= s.duration %></p>
+          <p class="service-price"><%= s.price %></p>
+          <p><%= s.description %></p>
+          
+
+          <%if user_signed_in? && is_admin? %>
+            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
+          <% end %>
         <% end %>
       </ul>
     </div>

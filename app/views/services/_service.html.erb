@@ -1,7 +1,11 @@
-<li><h1><%= @service.title %></h1>
-    <p><%= @service.description %></p>
-    <p><%= @service.duration %></p>
-    <p>$<%= @service.price %>0</p>
-    <p><%= link_to "Delete", @service, method: :delete, class: "delete_link", remote: true %></p>
-    <p><%= link_to "Edit", edit_service_path(@service) %></li></p>
-  </li>
+<ul>
+  <li><%= @service.title %></li>
+  <li><%= @service.description %></li>
+  <li><%= @service.duration %></li>
+  <li><%= @service.price %></li>
+
+  <%if user_signed_in? && is_admin? %>
+    <%= link_to "Delete", @service, method: :delete, class: "delete_link", remote: true %>
+    <%= link_to "Edit", edit_service_path(@service), class: "edit_link", remote: true %>
+  <% end %>
+</ul>
