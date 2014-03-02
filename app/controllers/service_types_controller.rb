@@ -1,6 +1,6 @@
 class ServiceTypesController < ApplicationController
   
-  before_filter :is_admin?, except: [:index]
+  before_filter :is_admin?
 
   def index
     @service_types = ServiceType.all
