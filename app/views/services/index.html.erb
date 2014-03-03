@@ -24,10 +24,10 @@
       <h3><%= @service_types.first.description %></h3>
       <ul class="service_list">
         <% @service_types.first.services.each do |s| %>
-          <li class="col-sm-6">
+          <li class="col-sm-5">
           <h3><%= s.title %></h3>
-          <p class="service-duration"><%= s.duration %></p>
-          <p class="service-price"><%= s.price %></p>
+           <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
+           <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
 
@@ -47,10 +47,10 @@
       <h3><%= type.description %></h3>
       <ul class="service_list">
         <% type.services.each do |s| %>
-          <li class="col-md-6">
+          <li class="col-md-5">
           <h3><%= s.title %></h3>
-          <p class="service-duration"><%= s.duration %></p>
-          <p class="service-price"><%= s.price %></p>
+          <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
+          <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
 

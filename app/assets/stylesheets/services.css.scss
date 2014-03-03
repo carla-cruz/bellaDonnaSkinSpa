@@ -1,22 +1,2 @@
 @import '_variables';
 
-.services {
-  li {
-  margin-top: 40px;
-  }
-  .service-price, .service-duration {
-    float: right;
-    display: inline-block;
-  }
-  .service-price{
-    margin-right: 40px;
-  }
-  h3 {
-    display: inline-block;
-    margin-top: 0;
-  }
-
-  .admin-links {
-    float: right;
-  }
-}
