@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
 	before_filter :is_admin?, except: [:new]
+	
 	def index
 		@appointment = Appointment.all
 	end
