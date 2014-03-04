@@ -1,11 +1,13 @@
-<li><h2><%= @product.name %></h2>
-  <p><%= @product.description %></p>
-  <p>$<%= @product.price %>0.00</p>
-  <%= image_tag(@product.image_url) %>
-  <% @product.categories.each do |cat| %>
-  <p><%= cat.name %></p>
-  <% end %>
-  <%= link_to "Delete", @product, method: :delete, class: "delete_link" %>
-  <%= link_to "Edit", edit_product_path(@product) %></li>
-  <hr>
-
+<li class="col-sm-6">
+ <%= image_tag(@product.image_url, class: "img-responsive") %>
+ <h2><%= @product.name %></h2>
+ <p class="product-price">$<%= @product.price %></p>
+ <p><strong><%= @product.description %></strong></p>
+ 
+ <%if user_signed_in? && is_admin? %>
+ <div class="admin-links">
+   <%= link_to "Delete", @product, method: :delete, class: "delete_link", remote: true %>
+   <%= link_to "Edit", edit_product_path(@product), class: "edit_link", remote: true %>
+ </div>
+<% end %>
+</li>

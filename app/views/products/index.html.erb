@@ -15,10 +15,6 @@
        <p class="product-price">$<%= p.price %></p>
        <p><strong><%= p.description %></strong></p>
        
-       
-       <% p.categories.each do |cat| %>
-       <p><%= cat.name %></p>
-       <% end %>
        <%if user_signed_in? && is_admin? %>
        <div class="admin-links">
          <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>

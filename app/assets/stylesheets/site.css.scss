@@ -186,8 +186,17 @@ width:100%;
     margin-top: 0;
   }
 
-  .admin-links {
+  .admin-links p {
+  	display: inline-block;
     float: right;
+    
   }
 
+}
+
+select {
+  width: 220px;
+  height: 30px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
 }

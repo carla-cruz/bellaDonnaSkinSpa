@@ -1,8 +1,12 @@
-<ul><li><%= @service_type.name %></li><li><%= @service_type.description %></li>
+<li>
+  <h3><%= @service_type.name %></h3>
+  <p><%= @service_type.description %></p>
   <%if user_signed_in? && is_admin? %>
-    <div class="admin-links">
-      <%= link_to "Delete", @service_type, method: :delete, class: "delete_link", remote: true %>
-      <%= link_to "Edit", edit_service_type_path(@service_type), class: "edit_link", remote: true %>
-    </div>
-    <% end %>
-</ul>
+  <div class="admin-links">
+    <%= link_to "Delete", @service_type, method: :delete, class: "delete_link", remote: true %>
+    <%= link_to "Edit", edit_service_type_path(@service_type), class: "edit_link", remote: true %>
+  </div>
+<% end %>
+  
+  <hr>
+</li>

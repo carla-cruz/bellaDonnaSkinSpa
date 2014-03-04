@@ -5,13 +5,16 @@
   <% end %>
 
   <% @service_types.each do |st| %>
-  <ul id="service_type_list" class="nav nav-tabs"> 
+  <ul id="service_type_list"> 
     <li>
       <h3><%= st.name %></h3>
       <p><%= st.description %></p>
       <%if user_signed_in? && is_admin? %>
-        <p><%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %></p>
-        <p><%= link_to "Edit", edit_service_type_path(st), class: "edit_link", remote: true %></p>
+      <div class="admin-links">
+        <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_service_type_path(st), class: "edit_link", remote: true %>
+      </div>
+
       <% end %>
       <hr>
       </li>

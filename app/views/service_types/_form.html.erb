@@ -1,5 +1,3 @@
-<%= render 'shared/form_errors', :object => @service_type %>
-
 <%= form_for @service_type, :html => {:id => "new_service_type", :class => "form form-inline"}, remote: true do |f| %>
 <h2>Add or Edit Service Type</h2>
 <a class="close" href="">X</a>
@@ -7,13 +5,14 @@
  <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
  </div>
  <div class="form-group">
- <%= f.text_field :image_url, class: "form-control", placeholder: "Image URL" %></div><br>
+ <%= f.text_field :image_url, class: "form-control", placeholder: "Image URL" %></div>
  </div>
 <div class="form-group">
- <%= f.text_area :description, class: "form-control", placeholder: "Description" %></div><br><br>
+ <%= f.text_area :description, class: "form-control", placeholder: "Description" %></div>
  </div>
  
  
  <%= f.submit class: "btn btn-primary"  %>
  
  <% end %>
+

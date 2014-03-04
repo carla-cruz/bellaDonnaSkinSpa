@@ -1,5 +1,5 @@
 $('form').hide();
 $('#new_service_type_link').show();
 $('.edit_link').show();
-$('ul#service_type_list li').append('<%= j render(@service_type) %>');
+$('ul#service_type_list li:last-child').append('<%= j render(@service_type) %>');
 

@@ -1,17 +1,19 @@
-<%= render 'shared/form_errors', :object => @promotion %>
 
 <%= form_for @promotion, :html => {:id => "new_promotion", :class => "form form-inline"}, remote: true do |f| %>
 <a class="close" href="">X</a>
 <h2>Add a Promotion</h2>
 <div class="form-group">
  <%= f.text_field :header, class: "form-control", placeholder: "Promotion Header" %>
+</div>
+<div class="form-group">
  <%= f.text_field :subheader, class: "form-control", placeholder: "Promotion Subheader" %>
- <%= f.text_field :description, class: "form-control", placeholder: "Promotion Short Description" %><br>
+</div>
+
+<div class="form-group">
+ <%= f.text_field :description, class: "form-control", placeholder: "Promotion Short Description" %>
  </div>
  
- </div><br>
- <div class="form-group">
+
  <%= f.submit "Add Promotion", class: "btn btn-primary" %>
- </div>
  
  <% end %>

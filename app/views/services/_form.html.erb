@@ -1,4 +1,3 @@
-<%= render 'shared/form_errors', :object => @service %>
 
 <%= form_for @service, :html => {:id => "new_service", :class => "form form-inline"}, remote: true do |f| %>
 <h2>Add New Service</h2>
@@ -17,7 +16,7 @@
 </div>
 
 <div class="form-group">
-  <%= f.select(:service_type_id, @service_types.collect {|st| [st.name, st.id]}, :prompt => 'Select') %>
+  <%= f.select(:service_type_id, @service_types.collect {|st| [st.name, st.id]}, :class => "control-label", :prompt => 'Select') %>
 </div>
 
 <%= f.submit class: "btn btn-primary" %>
