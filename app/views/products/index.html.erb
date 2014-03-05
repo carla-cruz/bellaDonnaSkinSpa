@@ -1,7 +1,7 @@
 <div class="site-container products container">
-  <div>
+  <div class="adminLink">
     <%if user_signed_in? && is_admin? %>
-    <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true %>
+    <span class="glyphicon glyphicon-plus text-primary"></span><%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true, :class => "text-primary" %>
     <br><br>
     <% end %>
   </div>
@@ -12,7 +12,7 @@
       <li class="col-sm-6">
        <%= image_tag(p.image_url, class: "img-responsive") %>
        <h2><%= p.name %></h2>
-       <p class="product-price">$<%= p.price %></p>
+      <span class="glyphicon glyphicon-usd"></span> <p class="product-price">$<%= p.price %></p>
        <p><strong><%= p.description %></strong></p>
        
        <%if user_signed_in? && is_admin? %>

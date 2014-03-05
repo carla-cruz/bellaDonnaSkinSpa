@@ -1,7 +1,7 @@
 <div class="site-container policies container">
-	<div>
+	<div class="adminLink">
 	<%if user_signed_in? && is_admin? %>
-	<%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true %>
+	<span class="glyphicon glyphicon-plus text-primary"></span><%= link_to "Add a Policy", new_policy_path, id: "new_policy_link", remote: true, :class => "text-primary" %>
 	<br><br>
 <% end %>
     </div>

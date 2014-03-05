@@ -1,6 +1,8 @@
 <div class="services container">
+ <div class="adminLink">
   <%if user_signed_in? && is_admin? %>
-  <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true %>
+  <span class="glyphicon glyphicon-plus text-primary"></span>
+  <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true, :class =>"text-primary" %>
   <br><br>
   <% end %>
   
@@ -18,13 +20,13 @@
 
     <div class="col-md-12 tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
       <div>
-        <img class="img-responsive" src="<%= @service_types.first.image_url %>">
+        <img class="img-responsive hidden-xs" src="<%= @service_types.first.image_url %>">
         <h1><%= @service_types.first.name %></h1>
       </div>
       <h3><%= @service_types.first.description %></h3>
       <ul class="service_list">
         <% @service_types.first.services.each do |s| %>
-          <li class="col-sm-5">
+          <li class="col-md-6">
           <h3><%= s.title %></h3>
            <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
            <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>
@@ -41,13 +43,13 @@
     <% @inactive_service_types.each do |type| %>
     <div class="col-md-12 tab-pane" id="<%= type.name.delete(' ') %>">
       <div>
-        <img class="img-responsive" src="<%= type.image_url %>">
+        <img class="img-responsive hidden-xs" src="<%= type.image_url %>">
         <h1><%= type.name %></h1>
       </div>
       <h3><%= type.description %></h3>
       <ul class="service_list">
         <% type.services.each do |s| %>
-          <li class="col-md-5">
+          <li class="col-md-6">
           <h3><%= s.title %></h3>
           <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
           <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>

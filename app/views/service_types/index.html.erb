@@ -1,6 +1,8 @@
 <div class="service_types container">
+ <div class="adminLink">
   <%if user_signed_in? && is_admin? %>
-  <%= link_to "Add a Service", new_service_type_path, id: "new_service_type_link", remote: true %>
+  <span class="glyphicon glyphicon-plus text-primary"></span>
+  <%= link_to "Add a Service", new_service_type_path, id: "new_service_type_link", remote: true, :class =>"text-primary" %>
   <br><br>
   <% end %>
 

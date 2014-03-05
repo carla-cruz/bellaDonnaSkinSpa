@@ -10,12 +10,13 @@
 		.contact{
 		padding:15px 5px 30px 5px !important;
 		}
-	}
+	} 
 }
 
 #product_list{
 	img{margin-top:15px;}
 }
+
 
 /*/// Contact Page ///*/
 
@@ -36,6 +37,7 @@ width:100%;
 
 	h1, p{
 	background-color:rgba(255,255,255, .0) !important;
+	text-align:center;
 	}
 
 	address{
@@ -48,10 +50,10 @@ width:100%;
 	}
 
 	h4{
-	display:inline-block;
 	font-style:italic;
 	margin:0;
 	padding:0;
+	text-align:center;
 	}
 
 
@@ -199,4 +201,19 @@ select {
   height: 30px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
+}
+
+
+/*/// Products Page ///*/
+
+.products {
+
+  .product-price {
+    display: inline-block;
+  }
+  
+  img {
+    max-width: 525px;
+
+  }
 }
