@@ -5,6 +5,6 @@ class Appointment < ActiveRecord::Base
 
   # Called before this object is saved to the DB
   def standardise_numbers
-    self.phone_number.gsub!(/\D/, "-")
+    self.phone_number.gsub!(/\W/, "-")
   end
 end
