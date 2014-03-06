@@ -11,7 +11,15 @@ class PromotionsController < ApplicationController
 	end
 
 	def create
+
 		@promotion = Promotion.create!(promotion_params)
+		promotions = Promotion.all
+
+		if @promotion.id == promotions.first.id
+			@promotion.is_active = true
+			@promotion.save
+		end
+
 		respond_to do |format|
 			format.html{redirect_to promotions_path}
 			format.js
