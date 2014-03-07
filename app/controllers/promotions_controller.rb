@@ -12,6 +12,10 @@ class PromotionsController < ApplicationController
 
 	def create
 		@promotion = Promotion.create!(promotion_params)
+		promotions = Promotion.all
+
+		@promotion.update_is_active_if_first_promo(promotions)
+
 		respond_to do |format|
 			format.html{redirect_to promotions_path}
 			format.js
@@ -23,12 +27,6 @@ class PromotionsController < ApplicationController
 		promo = Promotion.find(params[:id])
 		promo.update_attributes(is_active: true)
 		redirect_to promotions_path
-	end
-
-	def edit
-	end
-
-	def update
 	end
 
 	def destroy

@@ -6,7 +6,7 @@
 	<br><br>
 
 	<ul id="promotion_list">
-
+		<% if @promotions.length > 1 %>
 		<% @promotions.each do |p| %>
 		<div class="col-md-4 promotion">
 			<li>
@@ -21,6 +21,7 @@
 				
 			</li>
 		</div>
+		<% end %>
 		<% end %>
 	</ul>
 
