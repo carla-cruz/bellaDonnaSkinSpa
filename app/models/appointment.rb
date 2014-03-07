@@ -5,9 +5,7 @@ class Appointment < ActiveRecord::Base
 
   # Called before this object is saved to the DB
   def standardise_numbers
-    number = self.phone_number.gsub!(/\W/, "")
-    p "#{number}"
-    p "*" * 100
+    number = self.phone_number.gsub!(/\D/, "")
   end
 end
 
