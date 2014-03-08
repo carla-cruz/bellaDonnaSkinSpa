@@ -1,14 +1,16 @@
 <%= render 'shared/form_errors', :object => @policy %>
 
 <%= form_for @policy, :html => {:id => "new_policy", :class => "form form-inline"}, remote: true do |f| %>
-<h2>Add or Edit Policy</h2>
+<h2 class="formHeader">Add Policy</h2>
 <a class="close" href="">X</a>
-<div class="form-group">
- <%= f.text_field :name, class: "form-control", placeholder: "Policy Name" %>
- </div>
- <div class="form-group">
- <%= f.text_field :description, class: "form-control", placeholder: "Policy Desciption" %>
+<div class="form-inline marginTop marginBottom">
+	<div class="form-group col-xs-12">
+		<%= f.text_field :name, class: "form-control", placeholder: "Policy Name" %>
+	</div>
+	<div class="form-group col-xs-12">
+		<%= f.text_field :description, class: "form-control", placeholder: "Policy Desciption" %>
+	</div>
 </div>
- <%= f.submit class: "btn btn-primary" %>
- 
- <% end %>
+<%= f.submit class: "btn btn-primary" %>
+
+<% end %>

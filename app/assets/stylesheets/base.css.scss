@@ -5,6 +5,21 @@ color:#454545;
   font-family: ariel, sans-serif;
   padding-bottom: 100px;
 
+  .marginTop{
+  margin-top:15px;
+  display:block;
+  }
+
+  .marginBottom{
+  margin-bottom:15px;
+  display:block;
+  }
+
+  
+.formHeader{
+  display:inline;
+  }
+
 .appointment_banner {
   width: 100%;
   height: 40px;
@@ -23,6 +38,7 @@ color:#454545;
       color: #fff;
     }
   }
+
 }
 
 h1, h2, h3{line-height:1.0;}
