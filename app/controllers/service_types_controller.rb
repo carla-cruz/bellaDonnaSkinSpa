@@ -48,7 +48,7 @@ class ServiceTypesController < ApplicationController
   private
 
   def service_type_params
-    params.require(:service_type).permit(:name, :description)
+    params.require(:service_type).permit(:name, :description, :image_url)
   end
 end
 

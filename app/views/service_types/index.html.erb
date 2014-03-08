@@ -11,6 +11,7 @@
     <li>
       <h3><%= st.name %></h3>
       <p><%= st.description %></p>
+      <img src="<%= st.image_url %>">
       <%if user_signed_in? && is_admin? %>
       <div class="admin-links">
         <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
