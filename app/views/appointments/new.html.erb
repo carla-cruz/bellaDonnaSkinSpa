@@ -2,8 +2,9 @@
 	<div class="container">
 		<h1>Request an appointment today!</h1>
 		<p>Please fill out the form below and we'll confirm your appointment as soon as possible.</p>
-
-		<%= render 'form', :appointment => @appointment %>
+		<div class="form-inline">
+			<%= render 'form', :appointment => @appointment %>
+		</div>
 	</div>
 </div>
 

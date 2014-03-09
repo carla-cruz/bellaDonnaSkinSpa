@@ -20,8 +20,7 @@
   <div class="tab-content">
 
     <div class="col-md-12 tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
-      <div>
-        <img class="img-responsive hidden-xs" src="<%= @service_types.first.image_url %>">
+      <div class="jumbotron hidden-xs marginTop" style="background: url('<%= @service_types.first.image_url %>') no-repeat;">
         <h1><%= @service_types.first.name %></h1>
       </div>
       <h3><%= @service_types.first.description %></h3>
@@ -29,22 +28,23 @@
         <% @service_types.first.services.each do |s| %>
           <li class="col-md-6">
           <h3><%= s.title %></h3>
-           <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
+           <span class="glyphicon glyphicon-time"></span><p class="service-duration"><%= s.duration %></p>
            <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
-
-          <%if user_signed_in? && is_admin? %>
-            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+          <span class="pull-right">
+            <%if user_signed_in? && is_admin? %>
+          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+          &nbsp;&nbsp;&nbsp;
             <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
           <% end %>
+        </span>
         <% end %>
       </ul>
     </div>
     <% @inactive_service_types.each do |type| %>
     <div class="col-md-12 tab-pane" id="<%= type.name.delete(' ') %>">
-      <div>
-        <img class="img-responsive hidden-xs" src="<%= type.image_url %>">
+      <div class="jumbotron hidden-xs marginTop" style="background: url('<%= type.image_url %>') no-repeat;">
         <h1><%= type.name %></h1>
       </div>
       <h3><%= type.description %></h3>
@@ -52,15 +52,17 @@
         <% type.services.each do |s| %>
           <li class="col-md-6">
           <h3><%= s.title %></h3>
-          <span class="glyphicon glyphicon-usd"></span><p class="service-duration"><%= s.duration %></p>
+          <span class="glyphicon glyphicon-time"></span><p class="service-duration"><%= s.duration %></p>
           <span class="glyphicon glyphicon-usd"></span><p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
-
+        <span class="pull-right">
           <%if user_signed_in? && is_admin? %>
             <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+            &nbsp;&nbsp;&nbsp;
             <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
           <% end %>
+        </span>
         <% end %>
       </ul>
     </div>

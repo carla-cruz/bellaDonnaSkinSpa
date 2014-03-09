@@ -1,7 +1,6 @@
 <div class="promotions container">
 	<div class="adminLink">
   <%if user_signed_in? && is_admin? %>
-  <span class="glyphicon glyphicon-plus text-primary"></span>
 	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true, :class =>"text-primary" %>
 	<br><br>
 
