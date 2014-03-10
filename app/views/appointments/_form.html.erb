@@ -1,26 +1,26 @@
 <%= form_for @appointment do |f| %>
 
-<div>
+<div class="form-group ">
   <%= f.label :first_name %><br/>
   <%= f.text_field :first_name, :class => 'form-control' %>
 </div>
-<div>
+<div class="form-group ">
   <%= f.label :last_name %><br/>
   <%= f.text_field :last_name, :class => 'form-control' %>
 </div>
 
-<div>
+<div class="form-group ">
   <%= f.label :phone_number %><br/>
   <%= f.text_field :phone_number, :class => 'form-control'  %>
 </div>
 
-<div>
+<div class="form-group ">
   <%= f.label :appointment_type %><br/>
   <%= f.select :appointment_type, options_for_select(@services.map{ |i| [i.title, i.id] }), :class => 'form-control'  %>
 </div>
-<div>
+<div class="form-group ">
   <%= f.label :first_choice %><br />
-  <%= date_select :appointment, :first_date, :discard_year => true, :class => 'form-control' %>
+  <%= date_select :appointment, :first_date, :discard_year => true %>
   <%= f.time_select :first_time,
   :combined => true,
   :default => Time.now.change(:hour => 11, :min => 30),
@@ -33,7 +33,7 @@
   %>
 </div>
 
-<div>
+<div class="form-group ">
   <%= f.label :second_choice %><br />
   <%= date_select :appointment, :second_date, :discard_year => true %>
   <%= f.time_select :second_time,
@@ -48,7 +48,7 @@
   %>
 </div>
 
-<div>
+<div class="form-group ">
   <%= f.label :third_choice %><br />
   <%= date_select :appointment, :third_date, :discard_year => true %>
   <%= f.time_select :third_time,
@@ -63,12 +63,12 @@
   %>
 </div>
 
-<div>
+<div class="form-group col-xs-12">
   <%= f.label :comments %><br/>
   <%= f.text_field :comments, :class => 'form-control' %>
 </div>
 
-<div>
+<div class="form-group ">
   <%= f.check_box :is_new %>
   <%= f.label :I_am_a_new_customer %>
 </div>

@@ -1,18 +1,21 @@
 <%= form_for @service_type, :html => {:id => "new_service_type", :class => "form form-inline"}, remote: true do |f| %>
-<h2>Add or Edit Service Type</h2>
+<h2 class="formHeader">Add Service Type</h2>
 <a class="close" href="">X</a>
-<div class="form-group">
- <%= f.text_field :name, class: "form-control", placeholder: "Name" %>
- </div>
- <div class="form-group">
- <%= f.text_field :image_url, class: "form-control", placeholder: "Image URL" %></div>
- </div>
-<div class="form-group">
- <%= f.text_area :description, class: "form-control", placeholder: "Description" %></div>
- </div>
- 
- 
- <%= f.submit class: "btn btn-primary"  %>
- 
- <% end %>
+<div class="form-inline clearfix marginBottom">
+	<div class="form-group marginTop col-sm-6 col-xs-12">
+		<%= f.text_field :name, class: "form-control", placeholder: "Name" %>
+	</div>
+	<div class="form-group marginTop col-xs-6 col-xs-12">
+		<%= f.text_field :image_url, class: "form-control", placeholder: "Image URL" %></div>
+
+		<div class="form-group col-xs-12">
+			<%= f.text_area :description, class: "form-control", placeholder: "Description" %></div>
+		</div>
+	</div>
+
+</div>
+
+<%= f.submit class: "btn btn-primary"  %>
+
+<% end %>
 

@@ -1,7 +1,7 @@
 <div class="service_types container">
  <div class="adminLink">
   <%if user_signed_in? && is_admin? %>
-  <span class="glyphicon glyphicon-plus text-primary"></span>
+  </span>
   <%= link_to "Add a Service", new_service_type_path, id: "new_service_type_link", remote: true, :class =>"text-primary" %>
   <br><br>
   <% end %>
@@ -11,10 +11,13 @@
     <li>
       <h3><%= st.name %></h3>
       <p><%= st.description %></p>
-      <img src="<%= st.image_url $(%>">
+
+      <img class="img-responsive" src="<%= st.image_url %>">
+
       <%if user_signed_in? && is_admin? %>
       <div class="admin-links">
         <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
+        &nbsp;&nbsp;&nbsp;
         <%= link_to "Edit", edit_service_type_path(st), class: "edit_link", remote: true %>
       </div>
 

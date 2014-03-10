@@ -1,24 +1,25 @@
 
 <%= form_for @service, :html => {:id => "new_service", :class => "form form-inline"}, remote: true do |f| %>
-<h2>Add New Service</h2>
+<h2 class="formHeader">Add New Service</h2>
 <a class="close" href="">X</a>
-<div class="form-group">
- <%= f.text_field :title, class: "form-control",placeholder: "Title" %>
-</div>
-<div class="form-group">
- <%= f.text_field :duration, class: "form-control",placeholder: "Duration" %>
-</div>
-<div class="form-group">
- <%= f.text_field :price, class: "form-control",placeholder: "Price" %>
-</div>
-<div class="form-group">
- <%= f.text_field :description, class: "form-control",placeholder: "Description" %>
-</div>
+<div class="form-inline marginBottom">
+	<div class="form-group col-sm-8 col-xs-12 marginTop">
+		<%= f.text_field :title, class: "form-control",placeholder: "Title" %>
+	</div>
+	<div class="form-group col-sm-2 col-xs-6 marginTop">
+		<%= f.text_field :duration, class: "form-control",placeholder: "Duration" %>
+	</div>
+	<div class="form-group col-sm-2 col-xs-6 marginTop">
+		<%= f.text_field :price, class: "form-control",placeholder: "Price" %>
+	</div>
+	<div class="form-group col-xs-12">
+		<%= f.text_field :description, class: "form-control",placeholder: "Description" %>
+	</div>
 
-<div class="form-group">
-  <%= f.select(:service_type_id, @service_types.collect {|st| [st.name, st.id]}, :class => "control-label", :prompt => 'Select') %>
+	<div class="form-group">
+		<%= f.select(:service_type_id, @service_types.collect {|st| [st.name, st.id]}, :prompt => 'Select') %>
+	</div>
 </div>
-
 <%= f.submit class: "btn btn-primary" %>
 
 <% end %>
