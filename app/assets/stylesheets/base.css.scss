@@ -30,10 +30,6 @@ h1, h2, h3{line-height:1.0;}
     list-style: none;
   }
 
-  #new_policy_link {
-    padding-top: 20px;
-  }
-
   ul {
     margin: 0;
     padding: 0;
@@ -60,8 +56,16 @@ h1, h2, h3{line-height:1.0;}
 
   .adminLink{
   padding-top:10px;
-}
+  }
 
+    .adminLink > a{
+   border: 1px solid rgb(70, 168, 185);
+    border-radius: 5px;
+    color: rgb(70, 168, 185);
+    font-weight: bold;
+    padding: 7px 10px;
+  }
 
+  
 } 
 
