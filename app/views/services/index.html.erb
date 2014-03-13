@@ -20,7 +20,7 @@
   <div class="tab-content">
 
     <div class="col-md-12 tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
-      <div class="jumbotron hidden-xs marginTop" style="background: url('<%= @service_types.first.image_url %>') no-repeat;">
+      <div class="jumbotron hidden-xs marginTop" style="background: url('<%=  @service_types.first.image_url %>') no-repeat;">
         <h1><%= @service_types.first.name %></h1>
       </div>
       <h3><%= @service_types.first.description %></h3>
