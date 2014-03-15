@@ -1,4 +1,14 @@
-<li><h2><%= @policy.name %></h2><p><%= @policy.description %></p>
-  <%= link_to "Delete", @policy, method: :delete %>
-  <%= link_to "Edit", edit_policy_path(@policy) %>
-</li>
+<li>
+  <div class="col-md-12 policy">
+    <h2><%= @policy.name %></h2>
+    <p><%= @policy.description %></p>
+    <%if user_signed_in? && is_admin? %>
+    <div class="admin-links pull-right" style="margin-left:15px;">
+      <%= link_to "Delete", @policy, method: :delete, class: "delete_link", remote: true %>
+      &nbsp;&nbsp;&nbsp;
+      <%= link_to "Edit", edit_policy_path(@policy), class: "edit_link", remote: true %>
+      <% end %>
+
+      <hr>
+    </div>
+  </li>
