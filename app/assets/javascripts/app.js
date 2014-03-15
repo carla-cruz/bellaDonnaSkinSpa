@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.appointment_banner').mouseenter(function(){
+  $('.appointment_banner').hover(function(){
     $('.appointment_banner a:last-child').text('Your body will thank you.');
   });
 
