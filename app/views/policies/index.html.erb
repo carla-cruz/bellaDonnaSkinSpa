@@ -11,18 +11,23 @@
 <div>
 	<div>
     <h1>Our Policies</h1>
+    
 	<ul id="policy_list">
-		<div class="col-md-12 policy">
 		<% @policies.each do |p| %>
-		<li><h2><%= p.name %></h2><p><%= p.description %></p>
+
+		<li>
+			<div class="col-md-12 policy">
+			<h2><%= p.name %></h2>
+			<p><%= p.description %></p>
 			<%if user_signed_in? && is_admin? %>
        <div class="admin-links pull-right" style="margin-left:15px;">
 			<%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
          &nbsp;&nbsp;&nbsp;
 			<%= link_to "Edit", edit_policy_path(p), class: "edit_link", remote: true %>
 			<% end %>
-		</div>
+		
 			<hr>
+			</div>
 		</li>
 		<% end %>
 	</div>
