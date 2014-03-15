@@ -142,6 +142,14 @@ width:100%;
 /*/// Services Page ///*/
 
 .services {
+
+	figure{
+	border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+
+	}
+
 	#service_list {
 	margin-top: 20px;
 
@@ -157,12 +165,19 @@ width:100%;
 		}
 	}
 
-	h1{background-color: rgba(0, 0,0, .0)}
+	h1{
+	background-color: rgba(0, 0,0, .0);
+	font-size:58px;
+	left:5%;
+	position: absolute;
+    top: 5%;
+    z-index: 10;
+    }
 
 	#sugaring{
 
 		div:first-of-type{
-		background: url('/assets/legs.jpg') no-repeat;
+		background: url('/assets/legs.	pg') no-repeat;
 		background-position: 0 -5px;
 		margin-top:10px;
 		}
@@ -202,6 +217,7 @@ select {
 
   .product-price {
     display: inline-block;
+    font-size:17px;
   }
   
 }

@@ -14,8 +14,8 @@
       <li class="col-sm-6">
        <%= image_tag(p.image_url, class: "img-responsive") %>
        <h2><%= p.name %></h2>
-      <span class="glyphicon glyphicon-usd"></span> <p class="product-price">$<%= p.price %></p>
-       <p><strong><%= p.description %></strong></p>
+      <span class="glyphicon glyphicon-usd"></span><p class="product-price"><strong><%= p.price %></strong></p>
+       <p><%= p.description %></p>
        
        <%if user_signed_in? && is_admin? %>
        <div class="admin-links pull-right">
