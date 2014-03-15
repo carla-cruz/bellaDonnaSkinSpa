@@ -6,7 +6,7 @@ Policy.create(name: "Quiet Please", description: "To maintain a peaceful atmosph
 service1 = ServiceType.create!(name: "Skin Treatments", description: "Say goodbye to cookie-cutter facials! Our Dermalogica skin treatments are 100% customized to your skin's needs with a thorough skin analysis, making it a personalized treatment created especially for your skin's needs! The perfect home care routine will be prescribed as your secret weapon to keeping your skin feeling healthy, balanced and replenished!", image_url: "assets/legs.jpg")
 Service.create!(service_type_id: service1.id, title: "Spa Facial", duration: "60 minutes", price: "80", description: "A customized skin treatment for any skin type. Involves a professional double cleanse, exfoliation, extractions (if needed), a relaxing facial massage and masque to restore and revitalize your skin. After a hand, neck and shoulder massage, toner, & moisturizer completes the treatment and leaves you glowing and protected!")
 Service.create!(service_type_id: service1.id, title: "Microdermabrasion", duration: "60 minutes", price: "110", description: "Microdermabrasion is a skin resurfacing technique that removes superficial skin cells using a spray of microcrystals to remove the outermost layer of dry, dead skin cells revealing younger, healthier looking skin. This treatment helps to diminish the appearance of wrinkles, pore size, and pigmentation caused by aging, acne scarring and sun damage. Also stimulates collagen and elasten fiber beneath the surface of the skin resulting in a healthier and firmer appearance.")
-Service.create!(service_type_id: service1.id, title: "Power ½ Hour", duration: "30 minutes", price: "55", description: "Need a quick glow but pressed for time? Deep cleanse, steam, exfoliate & hydrate. Before you know it, you're good to go!")
+Service.create!(service_type_id: service1.id, title: "Power 1/2 Hour", duration: "30 minutes", price: "55", description: "Need a quick glow but pressed for time? Deep cleanse, steam, exfoliate & hydrate. Before you know it, you're good to go!")
 Service.create!(service_type_id: service1.id, title: "Age Smart Treatment", duration: "60 minutes", price: "90", description: "Are the signs of aging becoming more prevalent on your skin? Give it a revitalizing power boost with this treatment designed to help firm, smooth, nourish, regenerate and energize while controlling the biochemical triggers that lead to skin aging.")
 Service.create!(service_type_id: service1.id, title: "Acne Clearing Treatment", duration: "60 minutes", price: "85", description: "It's the end of the line for adult acne! This powerful, medicated treatment jump-starts acne clearing and helps to treat your acne and balance your skin.")
 Service.create!(service_type_id: service1.id, title: "UltraCalming Treatment", duration: "60 minutes", price: "85", description: "Red, itching, burning skin... Don't conceal it. Control it! The UltraCalming Treatment is a serious relief for sensitized skin that calms, soothes and replenishes the most aggravated, irritated, inflamed skin. By targeting the triggers behind redness, itching and stinging, this treatment will help recover skin health for long-term relief from flare-ups.")
@@ -26,12 +26,4 @@ Service.create!(service_type_id: service2.id, title: "Full Face", duration: "? m
 Promotion.create!(header: "Spa Facial Special", subheader: "25% Off Cash Payments", description: "January 15 - March 1")
 Promotion.create!(header: "Easter Weaster Special", subheader: "Free Body Treatments", description: "March through End of April")
 
-Product.create!(name: "Dermalogica", price: 999, brand: "Dermalogica", image_url: "")
-
-t.string   "name"
-    t.text     "description"
-    t.decimal  "price",                   precision: 10, scale: 2
-    t.string   "brand"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "image_url",   limit: 350
+Product.create!(name: "Dermalogica Something", price: 999, brand: "Dermalogica", description: "???")
