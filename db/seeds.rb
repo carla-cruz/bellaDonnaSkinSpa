@@ -26,4 +26,7 @@ Service.create!(service_type_id: service2.id, title: "Full Face", duration: "? m
 Promotion.create!(header: "Spa Facial Special", subheader: "25% Off Cash Payments", description: "January 15 - March 1")
 Promotion.create!(header: "Easter Weaster Special", subheader: "Free Body Treatments", description: "March through End of April")
 
-Product.create!(name: "Dermalogica Something", price: 999, brand: "Dermalogica", description: "???")
+Product.create!(name: "Dermalogica Something", price: "5", brand: "Dermalogica", description: "???", image_url: "derm_products.png")
+Product.create!(name: "Ingrown Hair Helper?", price: "5", brand: "PFB", description: "???", image_url: "pfb.png")
+Product.create!(name: "Ambiance: Orange and Lemongrass", price: "5", brand: "Aroma Naturals", description: "Essential Oils", image_url: "oils.png")
+Product.create!(name: "Nail Polishes", price: "5", brand: "O.P.I", description: "Nail Polish for the soul???", image_url: "opi.png")
