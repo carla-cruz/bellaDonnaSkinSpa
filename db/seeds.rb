@@ -25,3 +25,13 @@ Service.create!(service_type_id: service2.id, title: "Full Face", duration: "? m
 
 Promotion.create!(header: "Spa Facial Special", subheader: "25% Off Cash Payments", description: "January 15 - March 1")
 Promotion.create!(header: "Easter Weaster Special", subheader: "Free Body Treatments", description: "March through End of April")
+
+Product.create!(name: "Dermalogica", price: 999, brand: "Dermalogica", image_url: "")
+
+t.string   "name"
+    t.text     "description"
+    t.decimal  "price",                   precision: 10, scale: 2
+    t.string   "brand"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "image_url",   limit: 350
