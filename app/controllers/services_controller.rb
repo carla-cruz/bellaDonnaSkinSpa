@@ -27,6 +27,7 @@ class ServicesController < ApplicationController
 
   def edit
     @service = Service.find(params[:id])
+    @service_types = ServiceType.all
   end
 
   def update

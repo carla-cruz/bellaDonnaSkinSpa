@@ -4,7 +4,6 @@ $('.appointment_banner a').hover(changeMessage, resetMessage);
 
 });
 
-
 changeMessage = function(){
 	$(this).text('Your body will thank you.');
 };
