@@ -22,9 +22,9 @@
     <div class="col-md-12 tab-pane active" id="<%= @service_types.first.name.delete(' ') %>">
       <div class="hidden-xs marginTop">
         <h1><%= @service_types.first.name %></h1>
-      <figure><img src="<%=  @service_types.first.image_url %>" /></figure>
+      <figure class="col-sm-12"><img src="<%=  @service_types.first.image_url %>" /></figure>
       </div>
-      <h3><%= @service_types.first.description %></h3>
+      <h4><%= @service_types.first.description %></h4>
       <ul class="service_list">
         <% @service_types.first.services.each do |s| %>
           <li class="col-md-6">
@@ -47,9 +47,9 @@
     <div class="col-md-12 tab-pane" id="<%= type.name.delete(' ') %>">
       <div class="hidden-xs marginTop">
         <h1><%= type.name %></h1>
-        <figure><img src="<%= type.image_url %>" /></figure>
+        <figure class="col-sm-12"><img src="<%= type.image_url %>" /></figure>
       </div>
-      <h3><%= type.description %></h3>
+      <h4><%= type.description %></h4>
       <ul class="service_list">
         <% type.services.each do |s| %>
           <li class="col-md-6">
