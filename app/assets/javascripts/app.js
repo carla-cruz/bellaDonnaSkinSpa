@@ -11,3 +11,4 @@ changeMessage = function(){
 resetMessage = function(){
 	$(this).text('Shedule an appointment now!');
 };
+

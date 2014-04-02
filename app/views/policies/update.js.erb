@@ -1,5 +1,14 @@
+var edited_html;
+var edited_id;
+
 $('form').hide();
 $('#new_policy_link').show();
 $('.edit_link').show();
+
 $('#policy_list li:last-child').append('<%= j render(@policy) %>');
+
+edited_id = $('#policy_list li:last').attr('id');
+edited_html = $('#policy_list li:last').html();
+$('li#' + edited_id + ':first').replaceWith(edited_html);
+$('#policy_list li:last').remove();
 
