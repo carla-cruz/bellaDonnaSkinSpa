@@ -13,7 +13,11 @@
         <span>Phone Number:</span> 
             <p><%= parse_phone_number_string(a.phone_number) %></p>
         <span>New or Returning Client:</span> 
-            <p><%= a.is_new %></p>
+        <% if a.is_new %>
+            <p>This is a new client! yahoo!</p>
+        <% else %>
+            <p>Nope</p>
+        <% end %>
         <span>First choise:</span>
             <p><%= a.first_date.strftime('%m.%d.%y') %> <%= a.first_time %></p>
         <span>Second choise:</span>
