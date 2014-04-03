@@ -1,9 +1,8 @@
 var edited_html;
 var edited_id;
-
-$('form').hide();
-$('#new_policy_link').show();
-$('.edit_link').show();
+// var policyList = $('#policy_list');
+var policyLink = $('#new_policy_link');
+shuffleLinks(policyLink);
 
 $('#policy_list li:last-child').append('<%= j render(@policy) %>');
 

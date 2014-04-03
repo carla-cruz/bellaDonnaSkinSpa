@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-$('.appointment_banner a').hover(changeMessage, resetMessage);
+  $('.appointment_banner a').hover(changeMessage, resetMessage);
 
 });
 
@@ -12,3 +12,8 @@ resetMessage = function(){
 	$(this).text('Shedule an appointment now!');
 };
 
+shuffleLinks = function (link) {
+  $('form').hide();
+  link.show();
+  $('.edit_link').show();
+}

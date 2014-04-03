@@ -1,5 +1,13 @@
-$('form').hide();
-$('#new_service_type_link').show();
-$('.edit_link').show();
-$('ul#service_type_list li:last-child').append('<%= j render(@service_type) %>');
+
+var edited_html;
+var edited_id;
+var serviceTypeLink = $('#new_service_type_link')
+shuffleLinks(serviceTypeLink);
+
+$('#service_type_list li:last-child').append('<%= j render(@service_type) %>');
+
+edited_id = $('#service_type_list li:last').attr('id');
+edited_html = $('#service_type_list li:last').html();
+$('li#' + edited_id + ':first').replaceWith(edited_html);
+$('#service_type_list li:last').remove();
 
