@@ -21,9 +21,9 @@
         <span>Third choice:</span>
          <p><%= a.third_date.strftime('%m.%d.%y') %> <%= a.third_time %></p>
         <span>Appointment Type:</span>
-            <p><%= a.appointment_type %></p>
+            <p><%= Service.find(a.appointment_type).title %></p>
         <span>Client Comments:</span>
-            <p><%= a.comments %></p>
+            <p><%= a.comments %></p><br>
         <%= link_to "Delete Appointment", a, method: :delete, class: "delete_link btn btn-danger", remote: true %>
       </div>
     </li> 
