@@ -10,15 +10,13 @@
   <div>
     <h1>Our Products</h1>
     
-    <ul id="product_list">
+    <ul id="product_list" class="col-sm-12">
       <% @products.each do |p| %>
 
-      <li id="<%= p.id %>">
-        <div class="col-md-12 product">
+      <li id="<%= p.id %>" class="col-md-5 col-sm-12">
+        <div class="product">
          <%= image_tag(p.image_url, class: "img-responsive") %>
          <h2><%= p.name %></h2>
-         <span class="glyphicon glyphicon-usd"></span><p class="product-price"><strong><%= p.price %></strong></p>
-         <p><%= p.description %></p>
          
          <%if user_signed_in? && is_admin? %>
          <div class="admin-links pull-right">
