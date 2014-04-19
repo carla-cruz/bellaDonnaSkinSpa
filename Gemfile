@@ -16,8 +16,7 @@ gem 'pony'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem "combined_time_select", "~> 1.0.1"
-gem 'therubyracer'
-# gem 'protected_attributes'
+
 
 group :development do
   gem 'sqlite3'
