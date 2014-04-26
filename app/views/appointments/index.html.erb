@@ -3,11 +3,11 @@
 <h1>My Appointments</h1>
 
   <ul id="appointment_list">
-    <% @appointment.each do |a| %>
+    <% @appointments.each do |a| %>
     <div class="col-sm-6 appointment">
       <li>
         <span>Created:</span> 
-            <p><%= a.created_at.strftime('%m.%d.%y').date %></p>
+            <p><%= a.created_at.strftime('%B %d, %Y') %></p>
         <span>Client Name:</span> 
             <p><%= a.first_name %> <%= a.last_name %></p>
         <span>Phone Number:</span> 
@@ -18,12 +18,12 @@
         <% else %>
             <p>Nope</p>
         <% end %>
-        <span>First choise:</span>
-            <p><%= a.first_date.strftime('%m.%d.%y') %> <%= a.first_time %></p>
-        <span>Second choise:</span>
-        <p><%= a.second_date.strftime('%m.%d.%y') %> <%= a.second_time %></p>
-        <span>Third choice:</span>
-         <p><%= a.third_date.strftime('%m.%d.%y') %> <%= a.third_time %></p>
+        <span>First Choise:</span>
+            <p><%= a.first_date.strftime('%B %d, %Y') %> at <%= parse_time(a.first_time) %></p>
+        <span>Second Choise:</span>
+        <p><%= a.second_date.strftime('%B %d, %Y') %> at <%= parse_time(a.second_time) %></p>
+        <span>Third Choice:</span>
+         <p><%= a.third_date.strftime('%B %d, %Y') %> at <%= parse_time(a.third_time) %></p>
         <span>Appointment Type:</span>
             <p><%= Service.find(a.appointment_type).title %></p>
         <span>Client Comments:</span>
