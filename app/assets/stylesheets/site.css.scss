@@ -140,7 +140,22 @@ width:100%;
 	.delete_link{
 	margin-top:15px;
 	}
+
 }
+
+	.new_appointment{
+
+		select{
+		width:auto;
+		margin-right:15px;
+		}
+
+		.appointment-dropdown{
+			display: inline-block;
+    		margin-left: 20px;
+		}
+
+	}
 
 /*/// Services Page ///*/
 
@@ -248,7 +263,11 @@ select {
 /*/// Products Page ///*/
 
 #product_list{
-	
+
+		.admin-links{
+		height:auto;
+		}
+
 	h2{
 	background:#f3eea6;
 	padding:10px 5px;
@@ -261,7 +280,7 @@ select {
     	margin:10px 10px 50px 10px;
     	min-width:200px;
 		vertical-align:top;
-		}
+	}
 
 	div{
 	height:300px;
