@@ -15,7 +15,7 @@
 	#product_list{
 		li{
 		display:block !important;
-		margin:0 auto !important;
+		margin:15px auto 50px auto !important;
 		}
 	}
 }
@@ -144,6 +144,30 @@ width:100%;
 
 /*/// Services Page ///*/
 
+.service_list{
+	
+	span{
+	display: inline-block;
+	position: relative;
+    top: -2px;
+	}
+
+	.icon-usd{
+		margin-right:-2px;
+		width:13px;
+
+			img{
+			height:18px;
+			width:18px
+			}
+
+	}
+
+	span img {
+	width:20px;
+	}
+}
+
 .services {
 
 	figure{
@@ -166,6 +190,7 @@ width:100%;
 
 	#service_list {
 	margin-top: 20px;
+
 
 	li{
 	background-color:#FEEFC5;
@@ -196,6 +221,7 @@ width:100%;
   }
   .service-price, .service-duration {
     display: inline-block;
+    font-size:18px;
     margin-right: 40px;
   }
 
@@ -224,23 +250,22 @@ select {
 #product_list{
 	
 	h2{
+	background:#f3eea6;
+	padding:10px 5px;
 	text-align:center;
 	}
 	
 	li{
     	display: inline-block;
     	float: none;
-    	height:500px;
-    	margin:0 10px;
+    	margin:10px 10px 50px 10px;
+    	min-width:200px;
 		vertical-align:top;
 		}
 
-}
-
-.products {
-	h2{
-	text-align:center;
-	}
+	div{
+	height:300px;
+	}	
 
 	img{
 	margin:0 auto;

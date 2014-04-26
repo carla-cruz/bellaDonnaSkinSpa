@@ -16,7 +16,6 @@
       <li id="<%= p.id %>" class="col-md-5 col-sm-12">
         <div class="product">
          <%= image_tag(p.image_url, class: "img-responsive") %>
-         <h2><%= p.name %></h2>
          
          <%if user_signed_in? && is_admin? %>
          <div class="admin-links pull-right">
@@ -24,9 +23,9 @@
            &nbsp;&nbsp;&nbsp;
            <%= link_to "Edit", edit_product_path(p), class: "edit_link", remote: true %>
          </div>
-
          <% end %>
          </div>
+          <h2><%= p.name %></h2>
        </li>
        <% end %>
      </ul>

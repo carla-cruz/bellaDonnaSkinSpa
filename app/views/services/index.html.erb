@@ -29,8 +29,14 @@
         <% @service_types.first.services.each do |s| %>
           <li class="col-md-6" id="<%= s.id%>">
           <h3><%= s.title %></h3>
-           <span class="glyphicon glyphicon-time"></span>&nbsp;<p class="service-duration"><%= s.duration %></p>
-           <span class="glyphicon glyphicon-usd"></span>&nbsp;<p class="service-price"><%= s.price %></p>
+           <span class="icon-time">
+              <img src="/assets/glyphicon-hacks_clock.png">
+          </span>
+            <p class="service-duration"><%= s.duration %></p>
+          <span class="icon-usd">
+             <img src="/assets/glyphicon-hacks_usd.png">
+          </span>
+          <p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
           <span class="pull-right">
@@ -54,8 +60,14 @@
         <% type.services.each do |s| %>
           <li class="col-md-6" id="<%= s.id%>">
           <h3><%= s.title %></h3>
-          <span class="glyphicon glyphicon-time"></span>&nbsp;<p class="service-duration"><%= s.duration %></p>
-          <span class="glyphicon glyphicon-usd"></span>&nbsp;<p class="service-price"><%= s.price %></p>
+          <span class="icon-time">
+              <img src="/assets/glyphicon-hacks_clock.png">
+          </span>
+          <p class="service-duration"><%= s.duration %></p>
+          <span class="icon-usd">
+              <img src="/assets/glyphicon-hacks_usd.png">
+          </span>
+          <p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
           
         <span class="pull-right">
