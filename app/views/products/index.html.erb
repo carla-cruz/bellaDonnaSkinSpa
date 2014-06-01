@@ -1,12 +1,7 @@
 <%= render 'shared/appointment_banner'%>
 
 <div class="site-container products container">
-  <div class="adminLink">
-    <%if user_signed_in? && is_admin? %>
-    <%= link_to "Add a Product", new_product_path, id: "new_product_link", remote: true, :class => "text-primary" %>
-    <br><br>
-    <% end %>
-  </div>
+ 
   <div>
     <h1>Our Products</h1>
     
@@ -17,13 +12,6 @@
         <div class="product">
          <%= image_tag(p.image_url, class: "img-responsive") %>
          
-         <%if user_signed_in? && is_admin? %>
-         <div class="admin-links pull-right">
-           <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
-           &nbsp;&nbsp;&nbsp;
-           <%= link_to "Edit", edit_product_path(p), class: "edit_link", remote: true %>
-         </div>
-         <% end %>
          </div>
           <h2><%= p.name %></h2>
        </li>

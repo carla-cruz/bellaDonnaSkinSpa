@@ -1,5 +1,4 @@
 class PoliciesController < ApplicationController
-respond_to :html, :js
   before_filter :is_admin?, except: [:index]
 
   def index
@@ -12,10 +11,7 @@ respond_to :html, :js
 
   def create
     @policy = Policy.create!(policy_params)
-    respond_to do |format|
-      format.html { redirect_to policies_path }
-      format.js
-    end
+    redirect_to admin_path
   end
 
   def edit
@@ -24,15 +20,8 @@ respond_to :html, :js
 
   def update
     @policy = Policy.find(params[:id])
-    respond_to do |format|
-      if @policy.update_attributes(policy_params)
-        format.html { redirect_to policies_path, notice: 'policy was successfully updated.' }
-        format.js
-      else
-        format.html { render action: "edit" }
-        format.js
-      end
-    end
+    @policy.update_attributes(policy_params)
+    redirect_to admin_path
   end
 
   def destroy

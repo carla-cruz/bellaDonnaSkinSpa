@@ -14,10 +14,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.create!(product_params)
-    respond_to do |format|
-      format.html { redirect_to products_path }
-      format.js
-    end
+    redirect_to admin_path
   end
 
   def edit
@@ -26,15 +23,8 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    respond_to do |format|
-      if @product.update_attributes(product_params)
-        format.html { redirect_to products_path, notice: 'product was successfully updated.' }
-        format.js
-      else
-        format.html { render action: "edit" }
-        format.js
-      end
-    end
+    @product.update_attributes(product_params)
+    redirect_to admin_path
   end
 
   def destroy

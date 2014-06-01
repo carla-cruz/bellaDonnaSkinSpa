@@ -13,10 +13,7 @@ class ServiceTypesController < ApplicationController
 
   def create
     @service_type = ServiceType.create!(service_type_params)
-    respond_to do |format|
-      format.html { redirect_to service_types_path }
-      format.js
-    end
+    redirect_to admin_path
   end
 
   def edit
@@ -25,16 +22,8 @@ class ServiceTypesController < ApplicationController
 
   def update
     @service_type = ServiceType.find(params[:id])
-
-    respond_to do |format|
-      if @service_type.update_attributes(service_type_params)
-        format.html { redirect_to service_types_path, notice: 'service type was successfully updated.' }
-        format.js
-      else
-        format.html { render action: "edit" }
-        format.js
-      end
-    end
+    @service_type.update_attributes(service_type_params)
+    redirect_to admin_path
   end
 
   def destroy

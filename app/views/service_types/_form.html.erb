@@ -1,6 +1,5 @@
-<%= form_for @service_type, :html => {:id => "new_service_type", :class => "form form-inline"}, remote: true do |f| %>
-<h2 class="formHeader">Add Service Type</h2>
-<a class="close" href="">X</a>
+<%= form_for @service_type, :html => {:id => "new_service_type", :class => "form form-inline"} do |f| %>
+
 <div class="form-inline clearfix marginBottom">
 	<div class="form-group marginTop col-sm-6 col-xs-12">
 		<%= f.text_field :name, class: "form-control", placeholder: "Name" %>
