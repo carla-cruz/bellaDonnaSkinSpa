@@ -6,6 +6,6 @@ module ApplicationHelper
 
   protected 
   def is_admin?
-    current_user.email == "pyluftig@gmail.com" || current_user.email == "carla13cruz@gmail.com" || current_user.email == "bellaDonna7@comcast.net"
+    current_user && current_user.email == ENV["P_EMAIL"] || current_user && current_user.email == ENV["C_EMAIL"] || current_user && current_user.email == ENV["K_EMAIL"]
   end
 end
