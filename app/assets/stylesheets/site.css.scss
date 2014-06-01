@@ -144,7 +144,6 @@ width:100%;
 }
 
 	.new_appointment{
-
 		select{
 		width:auto;
 		margin-right:15px;
@@ -152,7 +151,7 @@ width:100%;
 
 		.appointment-dropdown{
 			display: inline-block;
-    		margin-left: 20px;
+    	margin: 20px 0 30px 13px;
 		}
 
 	}
@@ -257,6 +256,10 @@ select {
   height: 30px;
   border: 1px solid #cccccc;
   background-color: #ffffff;
+}
+
+.date-group {
+  padding-bottom: 30px;
 }
 
 
