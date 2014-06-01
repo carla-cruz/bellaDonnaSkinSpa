@@ -1,1 +1,91 @@
-<%= link_to "Add or Edit a Policy", new_policy_path %>
+<div class="container">
+
+  <div class="col-md-12">
+    <h2>Policies</h2>  
+    <ul>
+      <% @policies.each do |p| %>
+      <li>
+        <h3><%= p.name %></h3>
+        <p><%= p.description %></p>
+        <div class="admin-links pull-right">
+          <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_policy_path(p), class: "edit_link" %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+
+  <div class="col-md-12">
+    <h2>Service Types</h2>  
+    <ul>
+      <% @service_types.each do |st| %>
+      <li>
+
+        <h3><%= st.name %></h3>
+        <p><%= st.description %></p>
+        <p><%= st.image_url %></p>
+        <div class="admin-links pull-right">
+          <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_service_type_path(st), class: "edit_link" %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-12">
+    <h2>Services</h2>  
+    <ul>
+      <% @services.each do |s| %>
+      <li>
+        <h3><%= s.title %></h3>
+        <p><%= s.description %></p>
+        <p><%= s.price %></p>
+        <div class="admin-links pull-right">
+          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_service_path(s), class: "edit_link" %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-12">
+    <h2>Products</h2>  
+    <ul>
+      <% @products.each do |p| %>
+      <li>
+        <h3><%= p.name %></h3>
+        <p><%= p.description %></p>
+        <p><%= p.price %></p>
+        <p><%= p.image_url %></p>
+        <div class="admin-links pull-right">
+          <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_product_path(p), class: "edit_link" %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-12">
+    <h2>Promotions</h2>  
+    <ul>
+      <% @promotions.each do |p| %>
+      <li>
+        <h3><%= p.header %></h3>
+        <p><%= p.subheader %></p>
+        <p><%= p.is_active %></p>
+        <p><%= p.description %></p>
+        <div class="admin-links pull-right">
+          <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
+          <%= link_to "Edit", edit_promotion_path(p), class: "edit_link" %>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+</div>

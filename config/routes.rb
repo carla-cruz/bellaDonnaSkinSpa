@@ -3,6 +3,7 @@ BellaDonna::Application.routes.draw do
   devise_for :users
   root :to => "static_pages#index"
   get '/contact' => 'static_pages#contact', :as => :contact
+  get '/admin' => 'static_pages#admin'
 
   resources :products do 
     resources :catgories 

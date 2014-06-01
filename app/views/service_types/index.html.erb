@@ -7,7 +7,6 @@
 <% end %>
 
 
-<h1>Our Policies</h1>
 
 <ul id="service_type_list"> 
   <% @service_types.each do |st| %>
@@ -17,15 +16,6 @@
     <p><%= st.description %></p>
 
     <img class="img-responsive" src="<%= st.image_url %>">
-
-    <%if user_signed_in? && is_admin? %>
-    <div class="admin-links">
-      <%= link_to "Delete", st, method: :delete, class: "delete_link", remote: true %>
-      &nbsp;&nbsp;&nbsp;
-      <%= link_to "Edit", edit_service_type_path(st), class: "edit_link", remote: true %>
-    </div>
-
-    <% end %>
     <hr>
   </li>
   <% end %>
