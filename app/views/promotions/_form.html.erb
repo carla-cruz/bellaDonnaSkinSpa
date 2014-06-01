@@ -1,7 +1,5 @@
 
-<%= form_for @promotion, :html => {:id => "new_promotion", :class => "form form-inline"}, remote: true do |f| %>
-<h2 class="formHeader">Add a Promotion</h2>
-<a class="close" href="">X</a>
+<%= form_for @promotion, :html => {:id => "new_promotion", :class => "form form-inline"} do |f| %>
 <div class="form-inline">
 	<div class="form-group col-xs-6 marginTop">
 		<%= f.text_field :header, class: "form-control", placeholder: "Promotion Header" %>

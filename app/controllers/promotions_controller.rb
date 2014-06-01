@@ -16,18 +16,25 @@ class PromotionsController < ApplicationController
 
 		@promotion.update_is_active_if_first_promo(promotions)
 
-		respond_to do |format|
-			format.html{redirect_to promotions_path}
-			format.js
-		end
+		redirect_to admin_path
 	end
 
 	def activate_promotion
 		clear_promotion_list
 		promo = Promotion.find(params[:id])
 		promo.update_attributes(is_active: true)
-		redirect_to promotions_path
+		redirect_to "/admin#promotion"
 	end
+
+	def edit
+    @promotion = Product.find(params[:id])
+	end
+
+	def update
+    @promotion = Promotion.find(params[:id])
+    @promotion.update_attributes(promotion_params)
+    redirect_to admin_path
+  end
 
 	def destroy
 		@promotion = Promotion.find(params[:id])
@@ -38,7 +45,7 @@ class PromotionsController < ApplicationController
 			@promotion = Promotion.destroy(params[:id])
 		end
 		respond_to do |format|
-			format.html{redirect_to promotions_path}
+			format.html{redirect_to admin_path}
 			format.js
 		end
 
