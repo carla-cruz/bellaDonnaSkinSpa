@@ -1,13 +1,6 @@
 <%= render 'shared/appointment_banner'%>
 
 <div class="services container">
- <div class="adminLink">
-  <%if user_signed_in? && is_admin? %>
-  <%= link_to "Add a Service", new_service_path, id: "new_service_link", remote: true, :class =>"text-primary" %>
-  <br><br>
-  <% end %>
-  
-
   <!-- Nav tabs -->
   <ul class="nav nav-tabs">
     <li class="active" id="@servive_types.first.id"><a href="#<%= @service_types.first.name.delete(' ') %>" data-toggle="tab"><%= @service_types.first.name %></a></li>
@@ -38,14 +31,7 @@
           </span>
           <p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
-          
-          <span class="pull-right">
-            <%if user_signed_in? && is_admin? %>
-          <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-          &nbsp;&nbsp;&nbsp;
-            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
-          <% end %>
-        </span>
+         
         <% end %>
       </ul>
     </div>
@@ -69,14 +55,7 @@
           </span>
           <p class="service-price"><%= s.price %></p>
           <p><%= s.description %></p>
-          
-        <span class="pull-right">
-          <%if user_signed_in? && is_admin? %>
-            <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-            &nbsp;&nbsp;&nbsp;
-            <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %></li>
-          <% end %>
-        </span>
+        
         <% end %>
       </ul>
     </div>

@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="col-md-12">
-    <h2>Policies</h2>  
+    <h2>Policies <span><%= link_to "add another", new_policy_path %></span></h2>  
     <ul>
       <% @policies.each do |p| %>
       <li>
@@ -18,7 +18,7 @@
 
 
   <div class="col-md-12">
-    <h2>Service Types</h2>  
+    <h2>Service Types <span><%= link_to "add another", new_service_type_path %></span></h2>  
     <ul>
       <% @service_types.each do |st| %>
       <li>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="col-md-12">
-    <h2>Services</h2>  
+    <h2>Services <span><%= link_to "add another", new_service_path %></span></h2>  
     <ul>
       <% @services.each do |s| %>
       <li>
@@ -53,7 +53,7 @@
   </div>
 
   <div class="col-md-12">
-    <h2>Products</h2>  
+    <h2>Products <span><%= link_to "add another", new_product_path %></span></h2>  
     <ul>
       <% @products.each do |p| %>
       <li>
@@ -70,22 +70,27 @@
     </ul>
   </div>
 
-  <div class="col-md-12">
-    <h2>Promotions</h2>  
+  <div class="col-md-12 promotions">
+    <h2>Promotions <span><%= link_to "add another", new_promotion_path %></span></h2>  
+
     <ul>
       <% @promotions.each do |p| %>
-      <li>
-        <h3><%= p.header %></h3>
-        <p><%= p.subheader %></p>
-        <p><%= p.is_active %></p>
-        <p><%= p.description %></p>
-        <div class="admin-links pull-right">
-          <%= link_to "Delete", p, method: :delete, class: "delete_link", remote: true %>
-          <%= link_to "Edit", edit_promotion_path(p), class: "edit_link" %>
-        </div>
-      </li>
+      <div class="col-md-4 promotion">
+        <li>
+          <h2><%= p.header %></h2>
+          <p><%= p.subheader %></p>
+          <p><%= p.description %></p>
+          <p>Date Created: <%= p.created_at.strftime("%d %b. %Y") %></p>
+          <p>Promotion is: <strong><%= p.is_active == true ? "ACTIVE" : "INACTIVE" %></strong></p>
+          <%= link_to "Make Active", activate_promotion_path(p.id), class: "btn btn-success" %>
+
+          <%= link_to "Delete", p, method: :delete, class: "delete_link btn btn-danger", remote: true %>
+
+        </li>
+      </div>
       <% end %>
     </ul>
-  </div>
+    </div>
 
-</div>
+
+  </div>

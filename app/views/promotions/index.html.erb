@@ -1,11 +1,6 @@
 <div class="promotions container">
-	<div class="adminLink">
-  <%if user_signed_in? && is_admin? %>
-	<%= link_to "Add a Promotion", new_promotion_path, id: "new_promotion_link", remote: true, :class =>"text-primary" %>
-	<br><br>
-
+	
 	<ul id="promotion_list">
-		<% if @promotions.length > 1 %>
 		<% @promotions.each do |p| %>
 		<div class="col-md-4 promotion">
 			<li>
@@ -20,7 +15,6 @@
 				
 			</li>
 		</div>
-		<% end %>
 		<% end %>
 	</ul>
 
