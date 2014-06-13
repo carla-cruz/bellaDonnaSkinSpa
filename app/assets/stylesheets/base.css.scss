@@ -1,29 +1,29 @@
 @import '_variables';
 
 body {
-color:#454545;
+  color:#454545;
   font-family: ariel, sans-serif;
   padding-bottom: 100px;
 
   .marginTop{
-  margin-top:15px;
-  display:block;
+    margin-top:15px;
+    display:block;
   }
 
   .marginBottom{
-  margin-bottom:15px;
-  display:block;
+    margin-bottom:15px;
+    display:block;
   }
 
 
-.formHeader{
-  display:inline;
+  .formHeader{
+    display:inline;
   }
 
-h1, h2, h3{line-height:1.0;}
+  h1, h2, h3{line-height:1.0;}
 
   h2{
-  color: $primary-highlight;
+    color: $primary-highlight;
   }
 
   li {
@@ -39,36 +39,56 @@ h1, h2, h3{line-height:1.0;}
   }
 
   a {
-  color: $primary-orange;
+    color: $primary-orange;
   }
 
   a:hover, a:focus {
-  color: #b4997d;
-  background-color: #f4f1ee;
-  outline: none !important;
+    color: #b4997d;
+    background-color: #f4f1ee;
+    outline: none !important;
   }
 
-    .form-control:focus {
+  .form-control:focus {
     border-color: $primary-orange;
     box-shadow: 0 1px 1px rgba(242, 131, 82, 0.075) inset, 0 0 8px rgba(219, 87, 43, 0.6);
     outline: 0 none;
   }
 
   .adminLink{
-  padding-top:10px;
+    padding-top:10px;
   }
 
-    .adminLink > a{
+  .adminLink > a{
    border: 1px solid rgb(70, 168, 185);
-    border-radius: 5px;
-    color: rgb(70, 168, 185);
-    font-weight: bold;
-    padding: 7px 10px;
-  }
+   border-radius: 5px;
+   color: rgb(70, 168, 185);
+   font-weight: bold;
+   padding: 7px 10px;
+ }
 
-.jumbotron{
+ .jumbotron{
   background-color:rgba(255, 255, 255, .0);
 }
-  
+
 } 
+
+.admin-container h2 span {
+  font-size: 14px;
+}
+
+.admin-policies .delete_link, 
+.admin-service-types .delete_link,
+.admin-services .delete_link,
+.admin-products .delete_link
+ {
+  margin-left: 20px;
+}
+
+.appointments {
+  ul li {
+    height: 460px;
+    padding: 10px;
+    border: 1px solid #db572b;
+  }
+}
 
