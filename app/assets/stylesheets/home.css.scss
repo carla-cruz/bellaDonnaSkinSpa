@@ -4,7 +4,7 @@
 @media screen and (max-width: 825px){
 	.home{
 	min-height:350px !important;
-	background: url('/assets/womans_face_small.jpg') no-repeat center -50px !important;
+	background: url('/assets/breastCancerAwareness_small.jpg') no-repeat center -50px !important;
 	background-color: $head-bg-color;
 
 		#promotions {
@@ -30,8 +30,9 @@ form{
 }
 
 .home{
-background: url('/assets/womans_face.jpg') no-repeat center -100px;
-background-color:#FEEFC5;
+background: url('/assets/breastCancerAwareness.jpg') no-repeat center -100px;
+/*/// background-color:#FEEFC5; ///*/
+background-color: #f6d0cd;
 overflow:hidden;
 min-height:630px;
 position:relative;
